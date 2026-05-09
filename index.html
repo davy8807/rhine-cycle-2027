@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>萊茵河單車露營之旅 2027 — 行程準備</title>
+<link rel="stylesheet" href="rhine-style.css">
+<!-- Leaflet CSS/JS removed - using embedded SVG map instead for offline/canvas reliability -->
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+  <h1>🚲 萊茵河單車露營之旅</h1>
+  <div class="subtitle">EuroVelo 15 · 瑞士 → 北海 · 約 1,450 公里</div>
+  <div class="route-badge">📅 2027 年 5 月 · 為期約 2-3 星期</div>
+  <div class="lobster-easter">🦞</div>
+</header>
+
+<!-- Navigation -->
+<nav class="nav" id="topNav">
+  <div class="nav-inner">
+    <a href="#route">🗺️ 路線</a>
+    <a href="#ebike">⚡ 法例</a>
+    <a href="#kit">🔧 套件</a>
+    <a href="#checklist">✅ 清單</a>
+    <a href="#timeline">⏱️ 時間線</a>
+    <a href="#supplies">🛒 補給</a>
+    <a href="#safety">🛡️ 安全</a>
+    <a href="#video">🎥 拍攝</a>
+    <a href="#feedback">📬 聯絡</a>
+  </div>
+</nav>
+
+<div class="container">
+
+  <!-- ===================== ROUTE ===================== -->
+  <section class="section" id="route">
+    <h2 class="section-title">路線概覽</h2>
+
+    <div id="map" class="map-container">
+      <svg class="route-map" viewBox="0 0 600 800" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+        <defs>
+          <marker id="startDot" viewBox="0 0 20 20" refX="10" refY="10">
+            <circle cx="10" cy="10" r="8" fill="#5a9e6d" stroke="#f5f3ee" stroke-width="2"/>
+          </marker>
+          <marker id="endDot" viewBox="0 0 20 20" refX="10" refY="10">
+            <circle cx="10" cy="10" r="8" fill="#c55a4a" stroke="#f5f3ee" stroke-width="2"/>
+          </marker>
+          <marker id="cityDot" viewBox="0 0 10 10" refX="5" refY="5">
+            <circle cx="5" cy="5" r="4" fill="#3a7ca5" stroke="#f5f3ee" stroke-width="1.5"/>
+          </marker>
+          <linearGradient id="riverGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#1a3a2a;stop-opacity:1" />
+            <stop offset="50%" style="stop-color:#2d5a27;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#1a3a2a;stop-opacity:1" />
+          </linearGradient>
+        </defs>
+
+        <!-- Background -->
+        <rect width="600" height="800" fill="#1a2420" rx="12"/>
+
+        <!-- Country background regions (approximate) -->
+        <!-- Switzerland (top) -->
+        <text x="300" y="50" text-anchor="middle" fill="rgba(255,255,255,0.05)" font-size="60" font-weight="bold" font-family="sans-serif">🇨🇭</text>
+        <!-- Germany (middle) -->
+        <text x="300" y="380" text-anchor="middle" fill="rgba(255,255,255,0.05)" font-size="60" font-weight="bold" font-family="sans-serif">🇩🇪</text>
+        <!-- Netherlands (bottom) -->
+        <text x="300" y="730" text-anchor="middle" fill="rgba(255,255,255,0.05)" font-size="60" font-weight="bold" font-family="sans-serif">🇳🇱</text>
+        <!-- France (left middle) -->
+        <text x="80" y="350" text-anchor="middle" fill="rgba(255,255,255,0.05)" font-size="50" font-weight="bold" font-family="sans-serif">🇫🇷</text>
+
+        <!-- Rhine river path (simplified) -->
+        <path d="M 300,130 L 290,170 L 270,210 L 260,250 L 255,290 L 260,330 L 270,370 L 280,410 L 290,450 L 300,490 L 310,530 L 320,570 L 315,610 L 310,650 L 305,690 L 300,730 L 295,760"
+              fill="none" stroke="#4a7c3f" stroke-width="3" stroke-dasharray="8,4" opacity="0.6"/>
+
+        <!-- Country border lines -->
+        <line x1="50" y1="210" x2="550" y2="210" stroke="rgba(255,255,255,0.08)" stroke-width="1" stroke-dasharray="4,4"/>
+        <text x="520" y="205" fill="rgba(255,255,255,0.15)" font-size="11" font-family="sans-serif">瑞士/德國邊境</text>
+        <line x1="50" y1="590" x2="550" y2="590" stroke="rgba(255,255,255,0.08)" stroke-width="1" stroke-dasharray="4,4"/>
+        <text x="520" y="585" fill="rgba(255,255,255,0.15)" font-size="11" font-family="sans-serif">德國/荷蘭邊境</text>
+
+        <!-- Cities -->
+        <!-- Switzerland -->
+        <circle cx="300" cy="130" r="6" fill="#f5c542" stroke="#f5f3ee" stroke-width="2"/>
+        <text x="310" y="126" fill="#f5f3ee" font-size="12" font-weight="bold" font-family="sans-serif">🏔️ Andermatt</text>
+        <text x="310" y="139" fill="rgba(255,255,255,0.5)" font-size="10" font-family="sans-serif">起點 · 萊茵河源頭</text>
+        <circle cx="290" cy="170" r="4" fill="#3a7ca5" stroke="#f5f3ee" stroke-width="1.5"/>
+        <text x="300" y="166" fill="#d0ccc5" font-size="11" font-family="sans-serif">Luzern</text>
+        <circle cx="270" cy="210" r="5" fill="#3a7ca5" stroke="#f5f3ee" stroke-width="1.5"/>
+        <text x="240" y="205" fill="#d0ccc5" font-size="11" font-family="sans-serif">🇨🇭 Basel</text>
+
+        <!-- France -->
+        <circle cx="200" cy="250" r="4" fill="#3a7ca5" stroke="#f5f3ee" stroke-width="1.5"/>
+        <text x="155" y="247" fill="#d0ccc5" font-size="11" font-family="sans-serif">🇫🇷 Strasbourg</text>
+
+        <!-- Germany -->
+        <circle cx="255" cy="290" r="4" fill="#3a7ca5" stroke="#f5f3ee" stroke-width="1.5"/>
+        <text x="230" y="287" fill="#d0ccc5" font-size="11" font-family="sans-serif">Karlsruhe</text>
+        <circle cx="260" cy="330" r="4" fill="#3a7ca5" stroke="#f5f3ee" stroke-width="1.5"/>
+        <text x="238" y="327" fill="#d0ccc5" font-size="11" font-family="sans-serif">Mannheim</text>
+        <circle cx="270" cy="370" r="4" fill="#3a7ca5" stroke="#f5f3ee" stroke-width="1.5"/>
+        <text x="250" y="367" fill="#d0ccc5" font-size="11" font-family="sans-serif">Mainz</text>
+        <circle cx="280" cy="410" r="4" fill="#3a7ca5" stroke="#f5f3ee" stroke-width="1.5"/>
+        <text x="255" y="407" fill="#d0ccc5" font-size="11" font-family="sans-serif">Koblenz</text>
+        <!-- Rhine Gorge section highlight -->
+        <path d="M 270,370 L 280,410 L 290,450" fill="none" stroke="#c4a83a" stroke-width="2" opacity="0.5"/>
+        <text x="60" y="420" fill="rgba(255,255,255,0.25)" font-size="10" font-weight="bold" font-family="sans-serif">🏰 萊茵峽谷世界遺產</text>
+        <circle cx="290" cy="450" r="4" fill="#3a7ca5" stroke="#f5f3ee" stroke-width="1.5"/>
+        <text x="243" y="447" fill="#d0ccc5" font-size="11" font-family="sans-serif">Bonn</text>
+        <circle cx="300" cy="490" r="5" fill="#3a7ca5" stroke="#f5f3ee" stroke-width="1.5"/>
+        <text x="308" y="487" fill="#d0ccc5" font-size="11" font-family="sans-serif">🇩🇪 Köln</text>
+        <circle cx="310" cy="530" r="4" fill="#3a7ca5" stroke="#f5f3ee" stroke-width="1.5"/>
+        <text x="293" y="527" fill="#d0ccc5" font-size="11" font-family="sans-serif">Düsseldorf</text>
+        <circle cx="320" cy="570" r="4" fill="#3a7ca5" stroke="#f5f3ee" stroke-width="1.5"/>
+        <text x="303" y="567" fill="#d0ccc5" font-size="11" font-family="sans-serif">Duisburg</text>
+
+        <!-- Netherlands -->
+        <circle cx="315" cy="610" r="4" fill="#3a7ca5" stroke="#f5f3ee" stroke-width="1.5"/>
+        <text x="292" y="607" fill="#d0ccc5" font-size="11" font-family="sans-serif">Nijmegen</text>
+        <circle cx="310" cy="650" r="4" fill="#3a7ca5" stroke="#f5f3ee" stroke-width="1.5"/>
+        <text x="292" y="647" fill="#d0ccc5" font-size="11" font-family="sans-serif">Arnhem</text>
+        <circle cx="305" cy="690" r="4" fill="#3a7ca5" stroke="#f5f3ee" stroke-width="1.5"/>
+        <text x="283" y="687" fill="#d0ccc5" font-size="11" font-family="sans-serif">Utrecht</text>
+
+        <!-- End -->
+        <circle cx="295" cy="760" r="6" fill="#c55a4a" stroke="#f5f3ee" stroke-width="2"/>
+        <text x="308" y="757" fill="#f5f3ee" font-size="12" font-weight="bold" font-family="sans-serif">🌊 Hoek van Holland</text>
+        <text x="308" y="770" fill="rgba(255,255,255,0.5)" font-size="10" font-family="sans-serif">終點 · 北海海岸</text>
+
+        <!-- Distance markers -->
+        <line x1="50" y1="90" x2="95" y2="90" stroke="var(--sage)" stroke-width="1"/>
+        <text x="52" y="85" fill="var(--sage)" font-size="10" font-family="sans-serif">總距離</text>
+        <text x="52" y="98" fill="#f5f3ee" font-size="16" font-weight="bold" font-family="sans-serif">~1,450 km</text>
+
+        <line x1="50" y1="120" x2="95" y2="120" stroke="var(--sage)" stroke-width="1"/>
+        <text x="52" y="115" fill="var(--sage)" font-size="10" font-family="sans-serif">建議日數</text>
+        <text x="52" y="128" fill="#f5f3ee" font-size="14" font-weight="bold" font-family="sans-serif">14-21 天</text>
+
+        <line x1="50" y1="150" x2="95" y2="150" stroke="var(--sage)" stroke-width="1"/>
+        <text x="52" y="145" fill="var(--sage)" font-size="10" font-family="sans-serif">每日騎行</text>
+        <text x="52" y="158" fill="#f5f3ee" font-size="14" font-weight="bold" font-family="sans-serif">70-100 km</text>
+
+        <!-- Arrow key -->
+        <text x="300" y="785" text-anchor="middle" fill="rgba(255,255,255,0.15)" font-size="9" font-family="sans-serif">萊茵河向南 → 北海 · 簡化路線圖示</text>
+      </svg>
+    </div>
+
+    <div class="card mt-2">
+      <div class="card-title">EuroVelo 15 — 萊茵河路線</div>
+      <p><strong>起點：</strong>瑞士安德馬特 (Andermatt) — 萊茵河源頭</p>
+      <p><strong>終點：</strong>荷蘭鹿特丹 (Rotterdam) — 北海海岸</p>
+      <p><strong>路線長度：</strong>約 1,450 公里（官方標示 1,233 公里，含改道約 1,450 公里）</p>
+      <p><strong>途經國家：</strong>🇨🇭 瑞士 → 🇫🇷 法國（阿爾薩斯） → 🇩🇪 德國 → 🇳🇱 荷蘭</p>
+      <p><strong>建議行程：</strong>14–21 天，每日騎行約 70–100 公里</p>
+      <p class="text-small text-muted mt-1">💡 使用電動輔助 (pedelec) 每日可輕鬆騎行 80–100+ 公里，包括上坡路段。</p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">主要路段一覽</div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>路段</th><th>國家</th><th>距離</th><th>難度</th><th>特色</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Andermatt → Basel</td><td>🇨🇭</td><td>~230 km</td><td><span class="tag tag-yellow">中等</span></td><td>阿爾卑斯山區，上坡多</td></tr>
+            <tr><td>Basel → Strasbourg</td><td>🇨🇭→🇫🇷</td><td>~140 km</td><td><span class="tag tag-green">輕鬆</span></td><td>萊茵河平原、阿爾薩斯酒鄉</td></tr>
+            <tr><td>Strasbourg → Mainz</td><td>🇫🇷→🇩🇪</td><td>~260 km</td><td><span class="tag tag-green">輕鬆</span></td><td>城堡之路、普法爾茨地區</td></tr>
+            <tr><td>Mainz → Köln</td><td>🇩🇪</td><td>~200 km</td><td><span class="tag tag-green">輕鬆</span></td><td>萊茵峽谷、中萊茵 UNESCO 世界遺產</td></tr>
+            <tr><td>Köln → Rotterdam</td><td>🇩🇪→🇳🇱</td><td>~350 km</td><td><span class="tag tag-green">輕鬆</span></td><td>魯爾區、荷蘭低地單車徑</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EBIKE LEGALITY ===================== -->
+  <section class="section" id="ebike">
+    <h2 class="section-title">電動單車各國法例</h2>
+
+    <div class="card">
+      <div class="card-title">歐盟統一標準（適用於德國、法國、荷蘭）</div>
+      <p>根據歐盟法規 (EU) No 168/2013，只要你的電動輔助單車符合以下條件，就視為一般單車，<strong>無需車牌、保險、頭盔</strong>，可在所有單車徑合法行駛：</p>
+      <ul style="padding-left:18px; margin-top:8px;">
+        <li>✅ 最大功率 ≤ 250W</li>
+        <li>✅ 輔助速度上限 25 km/h</li>
+        <li>✅ 必須踩踏才有輔助（非油門驅動）</li>
+        <li>✅ 符合 EN 15194 歐洲安全標準</li>
+      </ul>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>國家</th><th>功率上限</th><th>速度上限</th><th>頭盔</th><th>車牌/保險</th><th>單車徑</th><th>備註</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>🇨🇭 瑞士</td>
+            <td>500W</td>
+            <td>25 km/h</td>
+            <td class="legal-yes">❌ 不需</td>
+            <td class="legal-yes">❌ 不需</td>
+            <td class="legal-yes">✅ 可以</td>
+            <td>16歲以上無需駕駛執照<br>非歐盟但法規更寬鬆</td>
+          </tr>
+          <tr>
+            <td>🇩🇪 德國</td>
+            <td>250W</td>
+            <td>25 km/h</td>
+            <td class="legal-yes">❌ 不需</td>
+            <td class="legal-yes">❌ 不需</td>
+            <td class="legal-yes">✅ 可以</td>
+            <td>對改裝執法嚴格<br>S-pedelec 需車牌</td>
+          </tr>
+          <tr>
+            <td>🇫🇷 法國</td>
+            <td>250W</td>
+            <td>25 km/h</td>
+            <td class="legal-yes">❌ 不需</td>
+            <td class="legal-yes">❌ 不需</td>
+            <td class="legal-yes">✅ 可以</td>
+            <td>阿爾薩斯單車徑完善</td>
+          </tr>
+          <tr>
+            <td>🇳🇱 荷蘭</td>
+            <td>250W</td>
+            <td>25 km/h</td>
+            <td class="legal-yes">❌ 不需</td>
+            <td class="legal-yes">❌ 不需</td>
+            <td class="legal-yes">✅ 可以</td>
+            <td>世界最佳單車網絡<br>改裝執法極嚴</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <div class="card-title">⚠️ 重要提醒</div>
+      <p>若你使用 <strong>350W 套件</strong>：</p>
+      <ul style="padding-left:18px; margin-top:6px;">
+        <li>🇨🇭 瑞士：✅ 仍然合法（500W 以下為「輕型電單車」，16歲以上無需牌照）</li>
+        <li>🇩🇪 / 🇫🇷 / 🇳🇱：❌ 理論上超標（使用高功率套件須以 S-pedelec 規格登記，包括車牌、保險、頭盔）</li>
+        <li><strong>建議：</strong>將套件設定在 250W/25km/h 模式以符合四國法例。瑞士的 500W 上限提供緩衝，但建議全程保持 250W 設定以免在歐盟國家有麻煩。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===================== CONVERSION KIT ===================== -->
+  <section class="section" id="kit">
+    <h2 class="section-title">改裝套件比較</h2>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>套件</th><th>類型</th><th>價格 (EUR)</th><th>重量</th><th>適合旅行</th><th>購買</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Yose Power 250W</strong></td>
+            <td>前輪轂</td>
+            <td>€209–€449</td>
+            <td>~4.5 kg</td>
+            <td><span class="tag tag-green">推薦</span></td>
+            <td>yosepower.com<br>寄送到香港</td>
+          </tr>
+          <tr>
+            <td><strong>Bafang BBS01B 250W</strong></td>
+            <td>中置電機</td>
+            <td>€350–€500</td>
+            <td>~4 kg</td>
+            <td><span class="tag tag-green">推薦</span></td>
+            <td>Amazon / 授權經銷商</td>
+          </tr>
+          <tr>
+            <td><strong>Tongsheng TSDZ2 250W</strong></td>
+            <td>中置電機</td>
+            <td>€280–€400</td>
+            <td>~3.5 kg</td>
+            <td><span class="tag tag-blue">可考慮</span></td>
+            <td>PSWPower / AliExpress</td>
+          </tr>
+          <tr>
+            <td><strong>Swytch Kit</strong></td>
+            <td>前輪轂（快拆）</td>
+            <td>€499–€799</td>
+            <td>~3 kg</td>
+            <td><span class="tag tag-yellow">超預算</span></td>
+            <td>swytchbike.com</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card" style="border-color: var(--moss);">
+      <div class="card-title">🏆 最佳推薦：Yose Power 36V 250W 28" (700C) 前輪轂套件</div>
+      <p>
+        <strong>價格：</strong>€449（含 18Ah 電池，約 HK$3,800）<br>
+        <strong>重量：</strong>電機約 3kg + 電池約 2.5kg<br>
+        <strong>續航：</strong>18Ah 約 60–80 公里（足夠一日騎行）<br>
+        <strong>轉換性：</strong>可快拆前輪 + 快拆電池座，數分鐘轉換 ebike ↔ 普通單車<br>
+        <strong>購買渠道：</strong>在香港透過 Yose Power 官網或 AliExpress 購買，出發前安裝好
+      </p>
+      <p class="text-small text-muted mt-1">
+        💡 建議攜帶備用內胎、扭矩臂和基本工具。電池需隨身攜帶上機（鋰電池航空託運限制）。
+      </p>
+    </div>
+  </section>
+
+  <!-- ===================== CHECKLIST ===================== -->
+  <section class="section" id="checklist">
+    <h2 class="section-title">行李清單</h2>
+    <p class="text-small text-muted mb-2">✓ 點選已完成項目 · 自動儲存進度</p>
+
+    <div class="card" id="checklist-container">
+      <div class="card-title">📦 單車裝備</div>
+      <div id="group-bike" class="checklist-group"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">🏕️ 露營裝備</div>
+      <div id="group-camp" class="checklist-group"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">👕 衣物</div>
+      <div id="group-clothes" class="checklist-group"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">🔧 工具與維修</div>
+      <div id="group-tools" class="checklist-group"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">📱 電子設備</div>
+      <div id="group-electronics" class="checklist-group"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">📄 證件與文件</div>
+      <div id="group-docs" class="checklist-group"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">🎥 拍攝裝備</div>
+      <div id="group-video" class="checklist-group"></div>
+    </div>
+
+    <div class="flex flex-wrap mt-2" style="gap:8px;">
+      <button onclick="resetChecklist()" style="background:var(--pine);color:var(--text);border:1px solid var(--border);padding:8px 16px;border-radius:8px;cursor:pointer;font-size:0.8rem;">🔄 重置所有項目</button>
+      <span class="text-small text-muted" id="checklist-progress-text">已準備 0 / 0 項</span>
+    </div>
+    <div class="progress-bar" style="max-width:300px;">
+      <div class="fill" id="checklist-progress-bar" style="width:0%"></div>
+    </div>
+  </section>
+
+  <!-- ===================== TIMELINE ===================== -->
+  <section class="section" id="timeline">
+    <h2 class="section-title">出發倒數</h2>
+
+    <div class="countdown" id="countdown">
+      <div class="countdown-box"><div class="num" id="cd-days">--</div><div class="label">天</div></div>
+      <div class="countdown-box"><div class="num" id="cd-hours">--</div><div class="label">小時</div></div>
+      <div class="countdown-box"><div class="num" id="cd-mins">--</div><div class="label">分鐘</div></div>
+      <div class="countdown-box"><div class="num" id="cd-secs">--</div><div class="label">秒</div></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">🗓️ 準備時間線</div>
+      <div class="timeline" id="timeline-container"></div>
+    </div>
+  </section>
+
+  <!-- ===================== SUPPLIES ===================== -->
+  <section class="section" id="supplies">
+    <h2 class="section-title">補給與物資</h2>
+
+    <div class="card">
+      <div class="card-title">🛒 沿途補給點</div>
+      <p>EV15 萊茵河路線沿途經過大量城鎮，補給非常方便：</p>
+      <ul style="padding-left:18px; margin-top:6px;">
+        <li><strong>瑞士段</strong> — Andermatt、Luzern、Basel：超市（Coop、Migros）密集，每 10–20 公里有補給點</li>
+        <li><strong>德國段</strong> — 萊茵河畔幾乎每個城鎮都有超市（REWE、Aldi、Lidl）、麵包店（Bäckerei）</li>
+        <li><strong>法國段</strong> — 阿爾薩斯酒鄉：超市（Carrefour、Intermarché）、每週市集</li>
+        <li><strong>荷蘭段</strong> — 全世界最密集的超市網絡（Albert Heijn、Jumbo）</li>
+      </ul>
+      <p class="text-small text-muted mt-1">💡 歐洲超市有完善的露營食物選擇：即食麵、能量棒、運動飲料、罐頭、麵包、芝士。</p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">⚡ 電動單車充電攻略</div>
+      <ul style="padding-left:18px; margin-top:6px;">
+        <li><strong>露營營地：</strong>大部分 Campingplatz 提供電源插座（歐標 Type C/F）</li>
+        <li><strong>餐廳/Café：</strong>入內飲一杯咖啡，請求借用插座充電（德國/Swiss 大部分很樂意）</li>
+        <li><strong>圖書館/遊客中心：</strong>部分德國小鎮提供公共充電設施</li>
+        <li><strong>電池續航管理：</strong>每日騎行 80km，18Ah 電池應足夠一日使用</li>
+        <li><strong>充電時間：</strong>標準充電約 4–6 小時（過夜充電即可）</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-title">💧 飲水與食物</div>
+      <ul style="padding-left:18px; margin-top:6px;">
+        <li>德國和瑞士自來水可直接飲用（Trinkwasser）。荷蘭水質也良好。</li>
+        <li>沿途城鎮有大量飲水噴泉（尤其在德國和瑞士）。</li>
+        <li>歐洲火車站和超市有便宜的瓶裝水（€0.50–1.00）。</li>
+        <li>每日補給策略：早餐在營地/酒店吃 → 中午在途經城鎮買麵包、芝士、水果 → 晚餐在營地煮食或到餐廳用膳。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===================== SAFETY ===================== -->
+  <section class="section" id="safety">
+    <h2 class="section-title">安全與緊急聯絡</h2>
+
+    <div class="card" style="border-color: var(--danger);">
+      <div class="card-title">🆘 緊急電話</div>
+      <div class="emergency-grid">
+        <div class="emergency-item">
+          <div class="country">🇪🇺 歐盟通用</div>
+          <div class="number">112</div>
+          <div class="note">警察 / 救護 / 消防</div>
+        </div>
+        <div class="emergency-item">
+          <div class="country">🇩🇪 德國</div>
+          <div class="number">110</div>
+          <div class="note">警察（非緊急）</div>
+        </div>
+        <div class="emergency-item">
+          <div class="country">🇨🇭 瑞士</div>
+          <div class="number">117</div>
+          <div class="note">警察 / 144 救護</div>
+        </div>
+        <div class="emergency-item">
+          <div class="country">🇳🇱 荷蘭</div>
+          <div class="number">0900-8844</div>
+          <div class="note">警察（非緊急）</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">🛡️ 安全風險評估</div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>風險類別</th><th>級別</th><th>備註</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>整體安全指數</td><td><span class="tag tag-green">非常安全</span></td><td>EV15 是全球最安全的單車路線之一</td></tr>
+            <tr><td>單車被盜</td><td><span class="tag tag-yellow">中等偏高</span></td><td>主要風險！使用 U 型鎖 + 追蹤器</td></tr>
+            <tr><td>露營安全</td><td><span class="tag tag-green">非常好</span></td><td>德國/荷蘭營地管理完善</td></tr>
+            <tr><td>戰爭威脅</td><td><span class="tag tag-green">低風險</span></td><td>遠離烏克蘭 &gt;1,500km</td></tr>
+            <tr><td>恐怖主義</td><td><span class="tag tag-green">低風險</span></td><td>一般警戒，鄉村路段不受影響</td></tr>
+            <tr><td>扒手</td><td><span class="tag tag-yellow">低風險</span></td><td>大城市交通樞紐需注意</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">🔐 單車防盜建議</div>
+      <ol style="padding-left:18px; margin-top:6px;">
+        <li>使用 <strong>U 型鎖</strong>（建議 Abus 或 Kryptonite，非鋼纜鎖）</li>
+        <li>睡覺時將單車帶入帳篷或房間</li>
+        <li>安裝 <strong>AirTag</strong> 或類似追蹤器隱藏在車架內</li>
+        <li>拆卸電池隨身攜帶（既防盜又方便充電）</li>
+        <li>歐洲電動單車盜竊猖獗，<strong>切勿讓單車無人看管</strong></li>
+      </ol>
+    </div>
+
+    <div class="card">
+      <div class="card-title">🌤️ 騎行安全</div>
+      <ul style="padding-left:18px; margin-top:6px;">
+        <li>歐洲車輛靠右行駛（與香港相同）</li>
+        <li>夜間必須安裝前後燈（法律要求）</li>
+        <li>德國對 ebike 改裝執法嚴格，最高可罰款 €500</li>
+        <li>瑞士阿爾卑斯路段 5 月氣溫可能降至 3–10°C，需準備保暖衣物</li>
+        <li>萊茵河地區潮濕多雨，使用防水袋保護電子設備</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===================== VIDEO GEAR ===================== -->
+  <section class="section" id="video">
+    <h2 class="section-title">🎥 iPhone 拍攝裝備清單</h2>
+
+    <div class="card">
+      <div class="card-title">📱 手機拍攝設定</div>
+      <ul style="padding-left:18px; margin-top:6px;">
+        <li><strong>主要相機：</strong>iPhone（建議使用 ProRes 或 HEVC 編碼，1080p 60fps 或 4K 30fps）</li>
+        <li><strong>拍攝模式：</strong>使用「動作模式」(Action Mode) 減少震動</li>
+        <li><strong>存儲方案：</strong>攜帶 iCloud 備份 + 每晚備份到 SSD/硬碟</li>
+        <li><strong>電源：</strong>攜帶 20,000mAh 行動電源，支援 PD 快充</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-title">🎒 推薦裝備</div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>裝備</th><th>用途</th><th>重量</th><th>備註</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>DJI Osmo Mobile 6</td><td>騎行錄影穩定</td><td>~300g</td><td>摺疊便攜</td></tr>
+            <tr><td>GoPro 運動相機</td><td>第一人稱視角</td><td>~150g</td><td>頭盔或龍頭固定</td></tr>
+            <tr><td>iPhone 手機夾</td><td>龍頭固定</td><td>~50g</td><td>導航兼拍攝</td></tr>
+            <tr><td>DJI Mic 2 領夾咪</td><td>收音提升</td><td>~60g</td><td>風聲過濾好</td></tr>
+            <tr><td>防水手機袋</td><td>保護手機</td><td>~30g</td><td>落雨必備</td></tr>
+            <tr><td>SD 讀卡器</td><td>備份相片</td><td>~20g</td><td>Lightning/USB-C</td></tr>
+            <tr><td>SSD 1TB</td><td>影片備份</td><td>~50g</td><td>每晚備份素材</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">🎬 拍攝計劃建議</div>
+      <ul style="padding-left:18px; margin-top:6px;">
+        <li><strong>每日 vlog：</strong>5–10 分鐘：出發 → 風景 → 午餐 → 營地</li>
+        <li><strong>B-roll：</strong>萊茵河景、騎行視角、城堡/葡萄園、露營 setup</li>
+        <li><strong>關鍵時刻：</strong>瑞士阿爾卑斯山口、中萊茵峽谷、荷蘭風車、北海終點</li>
+        <li><strong>聲音記錄：</strong>環境聲（河流、鳥鳴）、每晚錄音日記</li>
+        <li><strong>後製：</strong>使用 CapCut / LumaFusion 手機剪輯</li>
+      </ul>
+      <p class="text-small text-muted mt-1">💡 萊茵河 5 月天氣回暖（12–20°C），春季雨水較多，防水裝備要準備充足。</p>
+    </div>
+  </section>
+
+</div>
+
+<!-- Footer -->
+  <!-- ===================== FEEDBACK ===================== -->
+  <section class="section" id="feedback">
+    <h2 class="section-title">📬 意見回饋</h2>
+    <p class="text-muted mb-2" style="font-size:0.82rem;">發現有錯漏？有好建議？歡迎直接聯絡：</p>
+
+    <div class="contact-buttons">
+      <a href="mailto:davy8807&#64;gmail&#46;com" class="contact-btn btn-email" target="_blank">
+        <span class="contact-icon">✉️</span>
+        <span class="contact-label">電郵</span>
+        <span class="contact-detail">davy8807&#64;gmail.com</span>
+      </a>
+
+      <a href="https://wa.me/85296391603" class="contact-btn btn-whatsapp" target="_blank" rel="noopener">
+        <span class="contact-icon">💬</span>
+        <span class="contact-label">WhatsApp</span>
+        <span class="contact-detail">+852 9639 1603</span>
+      </a>
+
+    </div>
+  </section>
+
+<footer class="footer">
+  <p>🚲 萊茵河單車露營之旅 2027 · 準備平台</p>
+  <p>EuroVelo 15 · 瑞士 → 北海</p>
+  <p>研究日期：2026年5月 · 更新於 2026年5月 · 資訊僅供參考，出發前請自行核實最新法例</p>
+  <p class="mt-1" style="opacity:0.3;">🦞</p>
+</footer>
+
+<script>
+// ======================================================
+// Interactive JavaScript for Rhine Travel Prep
+// ======================================================
+
+// ---- MAP (inline SVG, no external deps needed)
+// ---- COUNTDOWN ----
+(function() {
+  // Target: May 1, 2027
+  const target = new Date('2027-05-01T00:00:00+02:00'); // CEST
+
+  function updateCountdown() {
+    const now = new Date();
+    const diff = target - now;
+
+    if (diff <= 0) {
+      document.getElementById('cd-days').textContent = '0';
+      document.getElementById('cd-hours').textContent = '0';
+      document.getElementById('cd-mins').textContent = '0';
+      document.getElementById('cd-secs').textContent = '0';
+      return;
+    }
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+    document.getElementById('cd-days').textContent = days;
+    document.getElementById('cd-hours').textContent = String(hours).padStart(2, '0');
+    document.getElementById('cd-mins').textContent = String(mins).padStart(2, '0');
+    document.getElementById('cd-secs').textContent = String(secs).padStart(2, '0');
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+})();
+
+// ---- TIMELINE ----
+(function() {
+  const container = document.getElementById('timeline-container');
+  if (!container) return;
+
+  const milestones = [
+    { date: '2026-05', desc: '開始研究：ebike 法例、conversion kit、安全路線', done: true },
+    { date: '2026-06', desc: '選擇 conversion kit、香港實戰露營訓練', done: true },
+    { date: '2026-07', desc: '購買改裝套件、熟習安裝使用', done: false },
+    { date: '2026-08', desc: '裝備全面測試、短片拍攝練習', done: false },
+    { date: '2026-09', desc: '預訂機票（香港→蘇黎世）', done: false },
+    { date: '2026-10', desc: '預訂首站住宿、辦理旅行保險、歐洲 SIM', done: false },
+    { date: '2026-11', desc: '打包測試：模擬露營騎行', done: false },
+    { date: '2026-12', desc: '半年眼科檢查 + 確認牙科檢查時間', done: false, active: true },
+    { date: '2027-01', desc: '裝備最終檢查、路線確定', done: false },
+    { date: '2027-02', desc: '購買歐洲 SIM 卡、下載離線地圖', done: false },
+    { date: '2027-03', desc: '打包模擬：5 天騎行測試', done: false },
+    { date: '2027-04', desc: '終極檢查：護照、簽證、保險、藥物', done: false },
+    { date: '2027-05-01', desc: '🚀 出發！香港→瑞士萊茵源頭', done: false }
+  ];
+
+  milestones.forEach(function(m) {
+    const div = document.createElement('div');
+    div.className = 'timeline-item';
+    if (m.done) div.classList.add('done');
+    if (m.active) div.classList.add('active');
+
+    div.innerHTML = '<div class="date">' + m.date + '</div><div class="desc">' + m.desc + '</div>';
+    container.appendChild(div);
+  });
+})();
+
+// ---- CHECKLIST ----
+(function()  const CHECKLIST_GROUPS = {
+    'bike': [
+      '單車（已安裝 ebike 套件）',
+      'ebike 電池（18Ah）',
+      '充電器 + 轉換插頭',
+      '備用內胎 x3',
+      '打氣筒',
+      '補胎工具套件',
+      '六角匙套裝',
+      '扭矩臂（前輪轂電機必需）',
+      '單車鎖（U 型鎖）',
+      '前燈 + 尾燈',
+      '單車頭盔',
+      '水壺架 x2',
+      '單車袋（摺疊後收納用）',
+      '後行李架 + 防水駝包',
+      '單車 GPS / 手機架'
+    ],
+    'camp': [
+      '帳篷（輕量化 2人帳）',
+      '睡袋（舒適溫度 5°C）',
+      '睡墊',
+      '露營爐頭 + 氣罐',
+      '煮食鍋具套裝',
+      '餐具（碗、杯、刀叉匙）',
+      '輕量摺椅',
+      '頭燈 / 營燈',
+      '防水地布',
+      '枕頭（充氣式）',
+      '晾衣繩',
+      '耳塞 + 眼罩'
+    ],
+    'clothes': [
+      '騎行褲 x2',
+      '騎行衫 x2',
+      '防風防水外套',
+      '保暖中層（fleece）',
+      '休閒褲/短褲 x1',
+      'T 恤 x2',
+      '內衣褲 x3',
+      '襪子 x3（羊毛）',
+      '防水鞋套',
+      '涼鞋/拖鞋',
+      '騎行手套',
+      '保暖帽 + 圍巾',
+      '太陽眼鏡',
+      '雨衣/雨褲'
+    ],
+    'tools': [
+      '內六角匙套裝',
+      '鏈條油',
+      '多用途工具（Leatherman 或同類）',
+      '棘輪扳手',
+      '電工膠帶',
+      '扎帶',
+      '魔術貼束帶',
+      '防水膠紙',
+      '小手巾'
+    ],
+    'electronics': [
+      'iPhone + 充電線',
+      '行動電源 20,000mAh',
+      '歐標轉換插頭 (Type C/F)',
+      '充電器（USB-C PD）',
+      '單車 GPS 或離線地圖',
+      '耳機',
+      'AirTag x2（單車用）',
+      '各國 SIM / eSIM'
+    ],
+    'docs': [
+      '護照 + 影印本',
+      '香港身份證影印本',
+      '旅行保險單',
+      'ebike 套件發票/規格書',
+      '機票（電子版）',
+      '住宿預訂確認',
+      '國際疫苗接種證明',
+      '緊急聯絡卡'
+    ],
+    'video': [
+      'DJI Osmo Mobile 6 穩定器',
+      'GoPro 運動相機 + 固定夾',
+      'iPhone 手機夾（龍頭用）',
+      'DJI Mic 2 領夾咪',
+      '防水手機袋',
+      'SD 讀卡器',
+      'SSD 1TB 備份硬碟',
+      '迷你三腳架',
+      '後備儲存卡 x2'
+    ]
+  };
+
+  const STORAGE_KEY = 'rhine-checklist';
+
+  // Load saved state
+  function loadChecklist() {
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      return saved ? JSON.parse(saved) : {};
+    } catch(e) {
+      return {};
+    }
+  }
+
+  function saveChecklist(state) {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    } catch(e) {}
+  }
+
+  function renderChecklists() {
+    const state = loadChecklist();
+    let total = 0;
+    let checked = 0;
+
+    Object.keys(CHECKLIST_GROUPS).forEach(function(groupKey) {
+      const container = document.getElementById('group-' + groupKey);
+      if (!container) return;
+
+      const items = CHECKLIST_GROUPS[groupKey];
+      container.innerHTML = '';
+
+      items.forEach(function(item, idx) {
+        const itemId = groupKey + '-' + idx;
+        const isChecked = state[itemId] === true;
+
+        if (isChecked) checked++;
+        total++;
+
+        const div = document.createElement('div');
+        div.className = 'checklist-item';
+
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.id = itemId;
+        checkbox.checked = isChecked;
+        checkbox.addEventListener('change', function(e) {
+          state[itemId] = e.target.checked;
+          saveChecklist(state);
+          updateProgress();
+        });
+
+        const label = document.createElement('label');
+        label.htmlFor = itemId;
+        label.textContent = item;
+
+        div.appendChild(checkbox);
+        div.appendChild(label);
+        container.appendChild(div);
+      });
+    });
+
+    updateProgress(total, checked);
+  }
+
+  function updateProgress(total, checked) {
+    if (total === undefined || checked === undefined) {
+      const state = loadChecklist();
+      total = 0; checked = 0;
+      Object.keys(CHECKLIST_GROUPS).forEach(function(gk) {
+        CHECKLIST_GROUPS[gk].forEach(function(item, idx) {
+          total++;
+          if (state[gk + '-' + idx]) checked++;
+        });
+      });
+    }
+    document.getElementById('checklist-progress-text').textContent =
+      '已準備 ' + checked + ' / ' + total + ' 項';
+    const pct = total > 0 ? Math.round((checked / total) * 100) : 0;
+    document.getElementById('checklist-progress-bar').style.width = pct + '%';
+  }
+
+  window.resetChecklist = function() {
+    if (!confirm('確定重置所有清單項目？')) return;
+    localStorage.removeItem(STORAGE_KEY);
+    renderChecklists();
+  };
+
+  renderChecklists();
+})();
+
+// ---- SMOOTH SCROLL FOR NAV ----
+(function() {
+  document.querySelectorAll('.nav a').forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').substring(1);
+      const target = document.getElementById(targetId);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // Update active
+        document.querySelectorAll('.nav a').forEach(function(na) { na.classList.remove('active'); });
+        this.classList.add('active');
+      }
+    });
+  });
+
+  // Scroll spy
+  window.addEventListener('scroll', function() {
+    const sections = document.querySelectorAll('.section');
+    const navLinks = document.querySelectorAll('.nav a');
+    let current = '';
+    sections.forEach(function(sec) {
+      const top = sec.offsetTop - 80;
+      if (window.scrollY >= top) {
+        current = sec.getAttribute('id');
+      }
+    });
+    navLinks.forEach(function(link) {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === '#' + current) {
+        link.classList.add('active');
+      }
+    });
+  });
+})();
+
+// ---- LOBSTER SURPRISE ----
+(function() {
+  // Click the header lobster 5 times for a surprise
+  let lobsterClicks = 0;
+  const lobsterEl = document.querySelector('.lobster-easter');
+  if (lobsterEl) {
+    lobsterEl.style.cursor = 'pointer';
+    lobsterEl.addEventListener('click', function() {
+      lobsterClicks++;
+      if (lobsterClicks >= 5) {
+        alert('🦞 你找到了龍蝦彩蛋！\n祝你萊茵河之旅順風順水！🚲');
+        lobsterClicks = 0;
+      } else {
+        this.style.opacity = Math.min(1, 0.15 + lobsterClicks * 0.17);
+      }
+    });
+  }
+})();
+
+console.log('🚲 Rhine Travel Prep loaded. Safe travels! 🦞');
+</script>
+
+</body>
+</html>
