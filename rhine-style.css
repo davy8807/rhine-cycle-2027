@@ -213,32 +213,34 @@ body {
   height: 140px;
   overflow: hidden;
   position: relative;
+  background: var(--pine);
 }
 
-.scenic-placeholder {
+.scenic-photo {
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.3s;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
 }
-.scenic-card:hover .scenic-placeholder {
-  transform: scale(1.05);
+.scenic-card:hover .scenic-photo {
+  transform: scale(1.08);
 }
 
-.placeholder-emoji {
-  font-size: 2.2rem;
-  margin-bottom: 4px;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
-}
-.placeholder-label {
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: rgba(255,255,255,0.8);
-  letter-spacing: 1px;
-  text-transform: uppercase;
+.scenic-img-label {
+  position: absolute;
+  bottom: 6px;
+  left: 6px;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.9);
+  letter-spacing: 0.3px;
+  pointer-events: none;
 }
 
 .scenic-body {
