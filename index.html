@@ -9,17 +9,110 @@
 </head>
 <body>
 
-<!-- Header -->
-<header class="header">
-  <h1>🚲 萊茵河單車露營之旅</h1>
-  <div class="subtitle">EuroVelo 15 · 瑞士 → 北海 · 約 1,450 公里</div>
-  <div class="route-badge">📅 2027 年 5 月 · 為期約 2-3 星期</div>
-  <div class="lobster-easter">🦞</div>
+<!-- ===================== HERO HEADER ===================== -->
+<header class="hero-header">
+  <div class="hero-bg-pattern"></div>
+  <div class="hero-content">
+    <div class="hero-flag-row">🇨🇭 ➔ 🇫🇷 ➔ 🇩🇪 ➔ 🇳🇱</div>
+    <h1 class="hero-title">🚲 萊茵河單車露營之旅</h1>
+    <p class="hero-subtitle">EuroVelo&nbsp;15 · 瑞士安德馬特 → 荷蘭北海 · 約&nbsp;1,450&nbsp;公里</p>
+    <div class="hero-meta">
+      <span class="hero-meta-item">📅 2027 年 5 月 · 2–3 星期</span>
+      <span class="hero-meta-item">⚡ 電動輔助單車</span>
+      <span class="hero-meta-item">🏕️ 全程露營</span>
+    </div>
+    <div class="hero-lobster">🦞</div>
+  </div>
 </header>
+
+<!-- ===================== SCENIC GALLERY ===================== -->
+<section class="section" id="scenic-gallery">
+  <h2 class="section-title">🏔️ 沿途風光</h2>
+  <p class="text-muted mb-2" style="font-size:0.82rem;">滑動瀏覽萊茵河路線上的經典景觀</p>
+
+  <div class="scenic-track">
+
+    <div class="scenic-card" data-city="andermatt">
+      <div class="scenic-img">
+        <div class="scenic-placeholder" style="background:linear-gradient(135deg,#1a3a2a,#3a7ca5);">
+          <div class="placeholder-emoji">🏔️</div>
+          <div class="placeholder-label">Andermatt</div>
+        </div>
+      </div>
+      <div class="scenic-body">
+        <div class="scenic-city"><span class="flag-icon">🇨🇭</span> Andermatt</div>
+        <div class="scenic-desc">阿爾卑斯山區起點 · 萊茵河源頭</div>
+        <div class="scenic-arrow">← 起點</div>
+      </div>
+    </div>
+
+    <div class="scenic-card" data-city="luzern">
+      <div class="scenic-img">
+        <div class="scenic-placeholder" style="background:linear-gradient(135deg,#2a5a3a,#5a9ec5);">
+          <div class="placeholder-emoji">🏞️</div>
+          <div class="placeholder-label">Luzern</div>
+        </div>
+      </div>
+      <div class="scenic-body">
+        <div class="scenic-city"><span class="flag-icon">🇨🇭</span> Luzern</div>
+        <div class="scenic-desc">琉森湖 · 卡佩爾橋 · 皮拉圖斯山</div>
+        <div class="scenic-arrow scenic-arrow-down">↓</div>
+      </div>
+    </div>
+
+    <div class="scenic-card" data-city="rhine-gorge">
+      <div class="scenic-img">
+        <div class="scenic-placeholder" style="background:linear-gradient(135deg,#4a7c3f,#c4a83a);">
+          <div class="placeholder-emoji">🏰</div>
+          <div class="placeholder-label">萊茵峽谷</div>
+        </div>
+      </div>
+      <div class="scenic-body">
+        <div class="scenic-city"><span class="flag-icon">🇩🇪</span> 中萊茵峽谷</div>
+        <div class="scenic-desc">UNESCO 世界遺產 · 城堡與葡萄園</div>
+        <div class="scenic-arrow scenic-arrow-down">↓</div>
+      </div>
+    </div>
+
+    <div class="scenic-card" data-city="cologne">
+      <div class="scenic-img">
+        <div class="scenic-placeholder" style="background:linear-gradient(135deg,#3a7ca5,#8a8a7a);">
+          <div class="placeholder-emoji">⛪</div>
+          <div class="placeholder-label">Köln</div>
+        </div>
+      </div>
+      <div class="scenic-body">
+        <div class="scenic-city"><span class="flag-icon">🇩🇪</span> Köln</div>
+        <div class="scenic-desc">科隆大教堂 · 萊茵河畔老城</div>
+        <div class="scenic-arrow scenic-arrow-down">↓</div>
+      </div>
+    </div>
+
+    <div class="scenic-card" data-city="hoek-van-holland">
+      <div class="scenic-img">
+        <div class="scenic-placeholder" style="background:linear-gradient(135deg,#c55a4a,#5a9ec5);">
+          <div class="placeholder-emoji">🌊</div>
+          <div class="placeholder-label">北海</div>
+        </div>
+      </div>
+      <div class="scenic-body">
+        <div class="scenic-city"><span class="flag-icon">🇳🇱</span> Hoek van Holland</div>
+        <div class="scenic-desc">北海海岸 · 旅程終點</div>
+        <div class="scenic-arrow">→ 終點</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="scenic-dots" id="scenicDots"></div>
+
+  <p class="text-small text-muted mt-2" style="text-align:center;">← 左右滑動／點擊上方卡片檢視沿途亮點位置</p>
+</section>
 
 <!-- Navigation -->
 <nav class="nav" id="topNav">
   <div class="nav-inner">
+    <a href="#scenic-gallery">📸 風光</a>
     <a href="#route">🗺️ 路線</a>
     <a href="#ebike">⚡ 法例</a>
     <a href="#kit">🔧 套件</a>
@@ -844,19 +937,65 @@
 
 // ---- LOBSTER SURPRISE ----
 (function() {
-  // Click the header lobster 5 times for a surprise
   let lobsterClicks = 0;
-  const lobsterEl = document.querySelector('.lobster-easter');
+  const lobsterEl = document.querySelector('.hero-lobster');
   if (lobsterEl) {
-    lobsterEl.style.cursor = 'pointer';
     lobsterEl.addEventListener('click', function() {
       lobsterClicks++;
       if (lobsterClicks >= 5) {
         alert('🦞 你找到了龍蝦彩蛋！\n祝你萊茵河之旅順風順水！🚲');
         lobsterClicks = 0;
       } else {
-        this.style.opacity = Math.min(1, 0.15 + lobsterClicks * 0.17);
+        this.style.opacity = Math.min(1, 0.12 + lobsterClicks * 0.18);
       }
+    });
+  }
+})();
+
+// ---- SCENIC GALLERY INTERACTION ----
+(function() {
+  const cards = document.querySelectorAll('.scenic-card');
+  const dotsContainer = document.getElementById('scenicDots');
+  if (!cards.length || !dotsContainer) return;
+
+  // Create dots
+  cards.forEach(function(_, i) {
+    const dot = document.createElement('div');
+    dot.className = 'dot' + (i === 0 ? ' active' : '');
+    dot.addEventListener('click', function() {
+      cards[i].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    });
+    dotsContainer.appendChild(dot);
+  });
+
+  // Click a card to scroll the route map to that section
+  cards.forEach(function(card) {
+    card.addEventListener('click', function() {
+      const city = this.getAttribute('data-city');
+      const routeSection = document.getElementById('route');
+      if (routeSection) {
+        routeSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // Flash the map briefly
+        const map = document.querySelector('.map-container');
+        if (map) {
+          map.style.transition = 'box-shadow 0.5s';
+          map.style.boxShadow = '0 0 20px rgba(90, 158, 109, 0.4)';
+          setTimeout(function() { map.style.boxShadow = 'none'; }, 1000);
+        }
+      }
+    });
+  });
+
+  // Update active dot on scroll for mobile
+  const track = document.querySelector('.scenic-track');
+  if (track && window.innerWidth <= 768) {
+    track.addEventListener('scroll', function() {
+      const scrollLeft = this.scrollLeft;
+      const cardWidth = cards[0].offsetWidth + 12;
+      const activeIdx = Math.round(scrollLeft / cardWidth);
+      document.querySelectorAll('.scenic-dots .dot').forEach(function(d, i) {
+        d.classList.toggle('active', i === Math.min(activeIdx, cards.length - 1));
+      });
     });
   }
 })();
