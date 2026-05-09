@@ -706,6 +706,74 @@ td.legal-no {
   #map { height: 280px; }
 }
 
+/* ===================== MUSIC PLAYER TOGGLE ===================== */
+.music-toggle {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.music-toggle:hover {
+  border-color: var(--moss);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+.music-toggle:active {
+  transform: translateY(0);
+}
+.music-toggle.playing {
+  border-color: var(--sage);
+  background: linear-gradient(135deg, var(--pine), var(--forest));
+  box-shadow: 0 4px 20px rgba(90, 158, 109, 0.3);
+}
+.music-toggle-icon {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+.music-toggle-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+}
+.music-toggle.playing .music-toggle-label {
+  color: var(--snow);
+}
+
+/* Pulse animation when playing */
+@keyframes musicPulse {
+  0%, 100% { box-shadow: 0 4px 16px rgba(0,0,0,0.3); }
+  50% { box-shadow: 0 4px 24px rgba(90, 158, 109, 0.4); }
+}
+.music-toggle.playing {
+  animation: musicPulse 2s ease-in-out infinite;
+}
+
+@media (max-width: 640px) {
+  .music-toggle {
+    bottom: 16px;
+    right: 16px;
+    padding: 8px 14px;
+  }
+  .music-toggle-label {
+    font-size: 0.65rem;
+  }
+}
+
 /* Utility */
 .mt-1 { margin-top: 6px; }
 .mt-2 { margin-top: 12px; }

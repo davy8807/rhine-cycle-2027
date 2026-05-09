@@ -637,6 +637,16 @@
   <p class="mt-1" style="opacity:0.3;">🦞</p>
 </footer>
 
+<!-- BACKGROUND MUSIC PLAYER -->
+<audio id="bgMusic" loop preload="metadata">
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<div class="music-toggle" id="musicToggle" title="背景音樂">
+  <div class="music-toggle-icon" id="musicToggleIcon">🎵</div>
+  <div class="music-toggle-label" id="musicToggleLabel">播放音樂</div>
+</div>
+
 <script>
 // ======================================================
 // Interactive JavaScript for Rhine Travel Prep
@@ -1005,6 +1015,43 @@
       });
     }
   }, 50);
+})();
+
+// ---- BACKGROUND MUSIC PLAYER ----
+(function() {
+  var audio = document.getElementById('bgMusic');
+  var toggle = document.getElementById('musicToggle');
+  if (!audio || !toggle) return;
+
+  var isPlaying = false;
+
+  toggle.addEventListener('click', function() {
+    if (isPlaying) {
+      audio.pause();
+      toggle.classList.remove('playing');
+      document.getElementById('musicToggleIcon').textContent = '🎵';
+      document.getElementById('musicToggleLabel').textContent = '播放音樂';
+    } else {
+      audio.play().then(function() {
+        toggle.classList.add('playing');
+        document.getElementById('musicToggleIcon').textContent = '🔊';
+        document.getElementById('musicToggleLabel').textContent = '暫停音樂';
+      }).catch(function(err) {
+        console.log('Audio play blocked:', err);
+        // On some browsers, first interaction is required
+        alert('點擊頁面任何位置後再試一次，大部分瀏覽器需要用戶互動才能播放音樂。');
+      });
+    }
+    isPlaying = !isPlaying;
+  });
+
+  // Auto-stop when audio ends naturally
+  audio.addEventListener('ended', function() {
+    isPlaying = false;
+    toggle.classList.remove('playing');
+    document.getElementById('musicToggleIcon').textContent = '🎵';
+    document.getElementById('musicToggleLabel').textContent = '播放音樂';
+  });
 })();
 
 console.log('🚲 Rhine Travel Prep loaded. Safe travels! 🦞');
