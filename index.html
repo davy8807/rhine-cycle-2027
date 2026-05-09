@@ -954,50 +954,67 @@
 
 // ---- SCENIC GALLERY INTERACTION ----
 (function() {
-  const cards = document.querySelectorAll('.scenic-card');
-  const dotsContainer = document.getElementById('scenicDots');
-  if (!cards.length || !dotsContainer) return;
+  var cards = document.querySelectorAll('.scenic-card');
+  var dotsContainer = document.getElementById('scenicDots');
+  // Wait a beat to ensure DOM is fully ready
+  setTimeout(function() {
+    cards = document.querySelectorAll('.scenic-card');
+    if (!cards.length) return;
 
-  // Create dots
-  cards.forEach(function(_, i) {
-    const dot = document.createElement('div');
-    dot.className = 'dot' + (i === 0 ? ' active' : '');
-    dot.addEventListener('click', function() {
-      cards[i].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-    });
-    dotsContainer.appendChild(dot);
-  });
+    // Create dots
+    if (dotsContainer) {
+      cards.forEach(function(_, i) {
+        var dot = document.createElement('div');
+        dot.className = 'dot' + (i === 0 ? ' active' : '');
+        dot.addEventListener('click', function() {
+          var track = document.querySelector('.scenic-track');
+          if (track) {
+            track.scrollTo({ left: cards[i].offsetLeft - cards[i].offsetParent.offsetLeft - 10, behavior: 'smooth' });
+          }
+        });
+        dotsContainer.appendChild(dot);
+      });
+    }
 
-  // Click a card to scroll the route map to that section
-  cards.forEach(function(card) {
-    card.addEventListener('click', function() {
-      const city = this.getAttribute('data-city');
-      const routeSection = document.getElementById('route');
-      if (routeSection) {
-        routeSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        // Flash the map briefly
-        const map = document.querySelector('.map-container');
-        if (map) {
-          map.style.transition = 'box-shadow 0.5s';
-          map.style.boxShadow = '0 0 20px rgba(90, 158, 109, 0.4)';
-          setTimeout(function() { map.style.boxShadow = 'none'; }, 1000);
+    // Click a card → scroll to route section and highlight map
+    cards.forEach(function(card) {
+      card.addEventListener('click', function(ev) {
+        // Visual feedback: brief highlight
+        card.classList.add('clicked');
+        setTimeout(function() { card.classList.remove('clicked'); }, 600);
+
+        var routeSection = document.getElementById('route');
+        if (routeSection) {
+          routeSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
-      }
-    });
-  });
-
-  // Update active dot on scroll for mobile
-  const track = document.querySelector('.scenic-track');
-  if (track && window.innerWidth <= 768) {
-    track.addEventListener('scroll', function() {
-      const scrollLeft = this.scrollLeft;
-      const cardWidth = cards[0].offsetWidth + 12;
-      const activeIdx = Math.round(scrollLeft / cardWidth);
-      document.querySelectorAll('.scenic-dots .dot').forEach(function(d, i) {
-        d.classList.toggle('active', i === Math.min(activeIdx, cards.length - 1));
+        // Flash highlight map container
+        var map = document.querySelector('.map-container');
+        if (map) {
+          map.style.transition = 'box-shadow 0.6s, border-color 0.6s';
+          map.style.boxShadow = '0 0 24px rgba(90, 158, 109, 0.5)';
+          map.style.borderColor = '#5a9e6d';
+          setTimeout(function() {
+            map.style.boxShadow = 'none';
+            map.style.borderColor = '';
+          }, 1200);
+        }
       });
     });
-  }
+
+    // Update active dot on scroll for mobile
+    var track = document.querySelector('.scenic-track');
+    if (track && window.innerWidth <= 768) {
+      track.addEventListener('scroll', function() {
+        var scrollLeft = this.scrollLeft;
+        var cardWidth = cards[0].offsetWidth + 12;
+        var activeIdx = Math.round(scrollLeft / cardWidth);
+        var dots = document.querySelectorAll('.scenic-dots .dot');
+        dots.forEach(function(d, i) {
+          d.classList.toggle('active', i === Math.min(activeIdx, cards.length - 1));
+        });
+      });
+    }
+  }, 50);
 })();
 
 console.log('🚲 Rhine Travel Prep loaded. Safe travels! 🦞');

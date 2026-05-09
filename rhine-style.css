@@ -189,13 +189,23 @@ body {
   border-radius: 14px;
   overflow: hidden;
   border: 1px solid var(--border);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
   cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(90,158,109,0.3);
 }
 .scenic-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 24px rgba(0,0,0,0.3);
   border-color: var(--moss);
+}
+.scenic-card:active {
+  transform: translateY(-2px) scale(0.98);
+  border-color: var(--sage);
+}
+.scenic-card.clicked {
+  border-color: var(--sage);
+  box-shadow: 0 0 0 2px rgba(90,158,109,0.2);
 }
 
 .scenic-img {
