@@ -104,6 +104,7 @@
   <div class="nav-inner">
     <a href="#scenic-gallery">📸 風光</a>
     <a href="#route">🗺️ 路線</a>
+    <a href="#hostels">🏠 旅舍</a>
     <a href="#ebike">⚡ 法例</a>
     <a href="#kit">🔧 套件</a>
     <a href="#checklist">✅ 清單</a>
@@ -132,6 +133,10 @@
           </marker>
           <marker id="cityDot" viewBox="0 0 10 10" refX="5" refY="5">
             <circle cx="5" cy="5" r="4" fill="#3a7ca5" stroke="#f5f3ee" stroke-width="1.5"/>
+          </marker>
+          <marker id="hostelDot" viewBox="0 0 16 16" refX="8" refY="8">
+            <rect x="2" y="2" width="12" height="12" rx="3" fill="#c4a83a" stroke="#f5f3ee" stroke-width="1.5"/>
+            <text x="8" y="11" text-anchor="middle" fill="#f5f3ee" font-size="10" font-weight="bold" font-family="sans-serif">H</text>
           </marker>
           <linearGradient id="riverGrad" x1="0%" y1="0%" x2="0%" y2="100%">
             <stop offset="0%" style="stop-color:#1a3a2a;stop-opacity:1" />
@@ -224,6 +229,28 @@
         <text x="52" y="145" fill="var(--sage)" font-size="10" font-family="sans-serif">每日騎行</text>
         <text x="52" y="158" fill="#f5f3ee" font-size="14" font-weight="bold" font-family="sans-serif">70-100 km</text>
 
+        <!-- Hostel markers -->
+        <g class="hostel-markers" opacity="0.9">
+          <use href="#hostelDot" x="278" y="165"/>
+          <use href="#hostelDot" x="258" y="205"/>
+          <use href="#hostelDot" x="188" y="245"/>
+          <use href="#hostelDot" x="243" y="285"/>
+          <use href="#hostelDot" x="258" y="365"/>
+          <use href="#hostelDot" x="268" y="405"/>
+          <use href="#hostelDot" x="278" y="445"/>
+          <use href="#hostelDot" x="288" y="485"/>
+          <use href="#hostelDot" x="298" y="525"/>
+          <use href="#hostelDot" x="308" y="565"/>
+          <use href="#hostelDot" x="303" y="605"/>
+          <use href="#hostelDot" x="298" y="645"/>
+          <use href="#hostelDot" x="293" y="685"/>
+        </g>
+
+        <!-- Hostel legend -->
+        <rect x="52" y="165" width="14" height="14" rx="3" fill="#c4a83a" stroke="#f5f3ee" stroke-width="1"/>
+        <text x="53" y="173" fill="#f5f3ee" font-size="8" font-weight="bold" font-family="sans-serif">H</text>
+        <text x="70" y="175" fill="rgba(255,255,255,0.4)" font-size="9" font-family="sans-serif">青年旅舍</text>
+
         <!-- Arrow key -->
         <text x="300" y="785" text-anchor="middle" fill="rgba(255,255,255,0.15)" font-size="9" font-family="sans-serif">萊茵河向南 → 北海 · 簡化路線圖示</text>
       </svg>
@@ -255,6 +282,61 @@
           </tbody>
         </table>
       </div>
+    </div>
+  </section>
+
+  <!-- ===================== HOSTELS ===================== -->
+  <section class="section" id="hostels">
+    <h2 class="section-title">沿途青年旅舍</h2>
+
+    <div class="card" style="border-color: var(--sky);">
+      <div class="card-title">🏠 沿途青年旅舍（YHA / Hostelling International）</div>
+      <p>以下係沿 EV15 路線各大城市嘅青年旅舍連結，方便你 plan 住宿。全部屬於國際青年旅舍聯盟 / HI 成員，質素穩定，適合單車旅行者入住（多數有單車存放處）。</p>
+
+      <div style="margin-top:12px;">
+        <h4 style="color:var(--snow);font-size:0.85rem;margin-bottom:6px;">🇨🇭 瑞士 — Schweizer Jugendherbergen</h4>
+        <ul style="padding-left:18px; font-size:0.82rem; color:var(--text-muted); line-height:2;">
+          <li>🏔️ <strong>Andermatt</strong> – 最近可住 <a href="https://www.youthhostel.ch/en/hostels/lucerne/" target="_blank" style="color:var(--sky-light);">Luzern Youth Hostel</a>（起點後第一站）</li>
+          <li>🏙️ <strong>Luzern</strong> – <a href="https://www.youthhostel.ch/en/hostels/lucerne/" target="_blank" style="color:var(--sky-light);">Luzern Youth Hostel</a>（湖畔，單車友好）</li>
+          <li>🏙️ <strong>Basel</strong> – <a href="https://www.youthhostel.ch/en/hostels/basel/" target="_blank" style="color:var(--sky-light);">Basel Youth Hostel</a>（近火車站，方便過境）</li>
+        </ul>
+      </div>
+
+      <div style="margin-top:12px;">
+        <h4 style="color:var(--snow);font-size:0.85rem;margin-bottom:6px;">🇫🇷 法國阿爾薩斯</h4>
+        <ul style="padding-left:18px; font-size:0.82rem; color:var(--text-muted); line-height:2;">
+          <li>🏙️ <strong>Strasbourg</strong> – <a href="https://www.hihostels.com/en/hostels/hi-strasbourg-2-cigogne" target="_blank" style="color:var(--sky-light);">HI Strasbourg — 2 Cigogne</a>（近大教堂同小法國區）</li>
+        </ul>
+      </div>
+
+      <div style="margin-top:12px;">
+        <h4 style="color:var(--snow);font-size:0.85rem;margin-bottom:6px;">🇩🇪 德國 — DJH Jugendherbergen</h4>
+        <ul style="padding-left:18px; font-size:0.82rem; color:var(--text-muted); line-height:2;">
+          <li>🏙️ <strong>Karlsruhe</strong> – <a href="https://www.jugendherberge.de/en/youth-hostels/karlsruhe/" target="_blank" style="color:var(--sky-light);">Jugendherberge Karlsruhe</a></li>
+          <li>🏰 <strong>Heidelberg</strong> – <a href="https://www.jugendherberge.de/en/youth-hostels/heidelberg-international/" target="_blank" style="color:var(--sky-light);">Jugendherberge Heidelberg International</a>（略偏離路線，值得一訪）</li>
+          <li>🏙️ <strong>Mainz</strong> – <a href="https://www.jugendherberge.de/en/youth-hostels/mainz/" target="_blank" style="color:var(--sky-light);">Jugendherberge Mainz</a></li>
+          <li>🏰 <strong>Koblenz</strong> – <a href="https://www.jugendherberge.de/en/youth-hostels/koblenz/" target="_blank" style="color:var(--sky-light);">Jugendherberge Koblenz</a>（峽谷入口）</li>
+          <li>🏙️ <strong>Bonn</strong> – <a href="https://www.jugendherberge.de/en/youth-hostels/bonn/" target="_blank" style="color:var(--sky-light);">Jugendherberge Bonn</a></li>
+          <li>🏙️ <strong>Köln</strong> – <a href="https://www.jugendherberge.de/en/youth-hostels/cologne-deutz/" target="_blank" style="color:var(--sky-light);">Jugendherberge Köln-Deutz</a>（近大教堂）或 <a href="https://www.jugendherberge.de/en/youth-hostels/cologne-riehl/" target="_blank" style="color:var(--sky-light);">Köln-Riehl</a></li>
+          <li>🏙️ <strong>Düsseldorf</strong> – <a href="https://www.jugendherberge.de/en/youth-hostels/duesseldorf/" target="_blank" style="color:var(--sky-light);">Jugendherberge Düsseldorf</a></li>
+          <li>🏙️ <strong>Duisburg</strong> – <a href="https://www.jugendherberge.de/en/youth-hostels/duisburg/" target="_blank" style="color:var(--sky-light);">Jugendherberge Duisburg</a></li>
+          <li>🌿 <strong>Essen-Werden</strong> – <a href="https://www.jugendherberge.de/en/youth-hostels/essen-werden/" target="_blank" style="color:var(--sky-light);">Jugendherberge Essen-Werden</a>（近 Baldeneysee）</li>
+        </ul>
+      </div>
+
+      <div style="margin-top:12px;">
+        <h4 style="color:var(--snow);font-size:0.85rem;margin-bottom:6px;">🇳🇱 荷蘭 — Stayokay</h4>
+        <ul style="padding-left:18px; font-size:0.82rem; color:var(--text-muted); line-height:2;">
+          <li>🏙️ <strong>Nijmegen</strong> – <a href="https://www.stayokay.com/en/location/nijmegen" target="_blank" style="color:var(--sky-light);">Stayokay Nijmegen</a></li>
+          <li>🌳 <strong>Arnhem</strong> – <a href="https://www.stayokay.com/en/location/arnhem" target="_blank" style="color:var(--sky-light);">Stayokay Arnhem</a></li>
+          <li>🏙️ <strong>Utrecht</strong> – <a href="https://www.stayokay.com/en/location/utrecht-centrum" target="_blank" style="color:var(--sky-light);">Stayokay Utrecht Centrum</a></li>
+          <li>🏙️ <strong>Rotterdam</strong> – <a href="https://www.stayokay.com/en/location/rotterdam" target="_blank" style="color:var(--sky-light);">Stayokay Rotterdam</a></li>
+          <li>🌊 <strong>Den Haag</strong> – <a href="https://www.stayokay.com/en/location/den-haag" target="_blank" style="color:var(--sky-light);">Stayokay Den Haag</a>（近終點，可作 last stop）</li>
+        </ul>
+      </div>
+
+      <p class="text-small text-muted mt-1">💡 德國 DJH 同瑞士 SJ 通常有單車存放室，部分可免費借用維修工具。建議提前網上預訂，5月係旺季。</p>
+      <p class="text-small text-muted">📌 Hostelling International（HI）會員享折扣，可在出發前於 <a href="https://www.hihostels.com/" target="_blank" style="color:var(--sky-light);">hihostels.com</a> 購買會籍。</p>
     </div>
   </section>
 
