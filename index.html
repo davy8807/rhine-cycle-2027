@@ -720,13 +720,13 @@
 </footer>
 
 <!-- BACKGROUND MUSIC PLAYER -->
-<audio id="bgMusic" loop preload="metadata">
+<audio id="bgMusic" loop preload="auto">
   <source src="music.mp3" type="audio/mpeg">
 </audio>
 
 <div class="music-toggle" id="musicToggle" title="背景音樂">
   <div class="music-toggle-icon" id="musicToggleIcon">🎵</div>
-  <div class="music-toggle-label" id="musicToggleLabel">播放音樂</div>
+  <div class="music-toggle-label" id="musicToggleLabel">🎵 背景音樂</div>
 </div>
 
 <script>
@@ -1103,36 +1103,55 @@
 (function() {
   var audio = document.getElementById('bgMusic');
   var toggle = document.getElementById('musicToggle');
-  if (!audio || !toggle) return;
+  var icon = document.getElementById('musicToggleIcon');
+  var label = document.getElementById('musicToggleLabel');
+  if (!audio || !toggle || !icon || !label) return;
 
   var isPlaying = false;
+  var isLoading = false;
+
+  function setState(state) {
+    if (state === 'playing') {
+      isPlaying = true;
+      isLoading = false;
+      toggle.classList.add('playing');
+      icon.textContent = '🔊';
+      label.textContent = '暫停音樂';
+    } else if (state === 'loading') {
+      isLoading = true;
+      icon.textContent = '⏳';
+      label.textContent = '載入中…';
+    } else {
+      isPlaying = false;
+      isLoading = false;
+      toggle.classList.remove('playing');
+      icon.textContent = '🎵';
+      label.textContent = '🎵 背景音樂';
+    }
+  }
+
+  audio.addEventListener('ended', function() { setState('stopped'); });
+  audio.addEventListener('error', function() { setState('stopped'); });
 
   toggle.addEventListener('click', function() {
+    if (isLoading) return;
     if (isPlaying) {
       audio.pause();
-      toggle.classList.remove('playing');
-      document.getElementById('musicToggleIcon').textContent = '🎵';
-      document.getElementById('musicToggleLabel').textContent = '播放音樂';
+      setState('stopped');
     } else {
+      setState('loading');
       audio.play().then(function() {
-        toggle.classList.add('playing');
-        document.getElementById('musicToggleIcon').textContent = '🔊';
-        document.getElementById('musicToggleLabel').textContent = '暫停音樂';
+        setState('playing');
       }).catch(function(err) {
-        console.log('Audio play blocked:', err);
-        // On some browsers, first interaction is required
-        alert('點擊頁面任何位置後再試一次，大部分瀏覽器需要用戶互動才能播放音樂。');
+        console.log('Audio play failed:', err);
+        setState('stopped');
       });
     }
-    isPlaying = !isPlaying;
   });
 
-  // Auto-stop when audio ends naturally
-  audio.addEventListener('ended', function() {
-    isPlaying = false;
-    toggle.classList.remove('playing');
-    document.getElementById('musicToggleIcon').textContent = '🎵';
-    document.getElementById('musicToggleLabel').textContent = '播放音樂';
+  // Preload audio buffer after page loads
+  window.addEventListener('load', function() {
+    audio.load();
   });
 })();
 
