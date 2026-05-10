@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-HK">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -14,17 +14,12 @@
   <div class="hero-bg-pattern"></div>
   <div class="hero-content">
     <div class="hero-flag-row">🇨🇭 ➔ 🇫🇷 ➔ 🇩🇪 ➔ 🇳🇱</div>
-    <h1 class="hero-title" data-i18n="hero-title">🚲 萊茵河單車露營之旅</h1>
-    <p class="hero-subtitle" data-i18n="hero-subtitle">EuroVelo&nbsp;15 · 瑞士安德馬特 → 荷蘭北海 · 約&nbsp;1,450&nbsp;公里</p>
+    <h1 class="hero-title">🚲 萊茵河單車露營之旅</h1>
+    <p class="hero-subtitle">EuroVelo&nbsp;15 · 瑞士安德馬特 → 荷蘭北海 · 約&nbsp;1,450&nbsp;公里</p>
     <div class="hero-meta">
       <span class="hero-meta-item">📅 2027 年 5 月 · 2–3 星期</span>
       <span class="hero-meta-item">⚡ 電動輔助單車</span>
       <span class="hero-meta-item">🏕️ 全程露營</span>
-    </div>
-        <div class="lang-toggle">
-      <button class="lang-btn lang-btn-zh active" data-lang="zh" title="中文">🇨🇳</button>
-      <span class="lang-btn-sep">|</span>
-      <button class="lang-btn lang-btn-en" data-lang="en" title="English">🇬🇧</button>
     </div>
     <div class="hero-lobster">🦞</div>
   </div>
@@ -32,8 +27,8 @@
 
 <!-- ===================== SCENIC GALLERY ===================== -->
 <section class="section" id="scenic-gallery">
-  <h2 class="section-title" data-i18n="sec-scenic">🏔️ 沿途風光</h2>
-  <p class="text-muted mb-2" style="font-size:0.82rem;" data-i18n="scenic-subtitle">滑動瀏覽萊茵河路線上的經典景觀</p>
+  <h2 class="section-title">🏔️ 沿途風光</h2>
+  <p class="text-muted mb-2" style="font-size:0.82rem;">滑動瀏覽萊茵河路線上的經典景觀</p>
 
   <div class="scenic-track">
 
@@ -107,17 +102,17 @@
 <!-- Navigation -->
 <nav class="nav" id="topNav">
   <div class="nav-inner">
-    <a href="#scenic-gallery" data-i18n="nav-scenic">📸 風光</a>
-    <a href="#route" data-i18n="nav-route">🗺️ 路線</a>
-    <a href="#hostels" data-i18n="nav-hostels">🏠 旅舍</a>
-    <a href="#ebike" data-i18n="nav-ebike">⚡ 法例</a>
-    <a href="#kit" data-i18n="nav-kit">🔧 套件</a>
-    <a href="#checklist" data-i18n="nav-checklist">✅ 清單</a>
-    <a href="#timeline" data-i18n="nav-timeline">⏱️ 時間線</a>
-    <a href="#supplies" data-i18n="nav-supplies">🛒 補給</a>
-    <a href="#safety" data-i18n="nav-safety">🛡️ 安全</a>
-    <a href="#video" data-i18n="nav-video">🎥 拍攝</a>
-    <a href="#feedback" data-i18n="nav-feedback">📬 聯絡</a>
+    <a href="#scenic-gallery">📸 風光</a>
+    <a href="#route">🗺️ 路線</a>
+    <a href="#hostels">🏠 旅舍</a>
+    <a href="#ebike">⚡ 法例</a>
+    <a href="#kit">🔧 套件</a>
+    <a href="#checklist">✅ 清單</a>
+    <a href="#timeline">⏱️ 時間線</a>
+    <a href="#supplies">🛒 補給</a>
+    <a href="#safety">🛡️ 安全</a>
+    <a href="#video">🎥 拍攝</a>
+    <a href="#feedback">📬 聯絡</a>
   </div>
 </nav>
 
@@ -125,7 +120,7 @@
 
   <!-- ===================== ROUTE ===================== -->
   <section class="section" id="route">
-    <h2 class="section-title" data-i18n="sec-route">路線概覽</h2>
+    <h2 class="section-title">路線概覽</h2>
 
     <div id="map" class="map-container">
       <svg class="route-map" viewBox="0 0 600 800" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
@@ -262,7 +257,7 @@
     </div>
 
     <div class="card mt-2">
-      <div class="card-title" data-i18n="card-route-overview">EuroVelo 15 — 萊茵河路線</div>
+      <div class="card-title">EuroVelo 15 — 萊茵河路線</div>
       <p><strong>起點：</strong>瑞士安德馬特 (Andermatt) — 萊茵河源頭</p>
       <p><strong>終點：</strong>荷蘭鹿特丹 (Rotterdam) — 北海海岸</p>
       <p><strong>路線長度：</strong>約 1,450 公里（官方標示 1,233 公里，含改道約 1,450 公里）</p>
@@ -272,7 +267,7 @@
     </div>
 
     <div class="card">
-      <div class="card-title" data-i18n="card-segments">主要路段一覽</div>
+      <div class="card-title">主要路段一覽</div>
       <div class="table-wrap">
         <table>
           <thead>
@@ -292,14 +287,14 @@
 
   <!-- ===================== HOSTELS ===================== -->
   <section class="section" id="hostels">
-    <h2 class="section-title" data-i18n="sec-hostels">沿途青年旅舍</h2>
+    <h2 class="section-title">沿途青年旅舍</h2>
 
     <div class="card" style="border-color: var(--sky);">
-      <div class="card-title" data-i18n="card-hostels-title">🏠 沿途青年旅舍（YHA / Hostelling International）</div>
-      <p data-i18n="card-hostels-desc">以下係沿 EV15 路線各大城市嘅青年旅舍連結，方便你 plan 住宿。全部屬於國際青年旅舍聯盟 / HI 成員，質素穩定，適合單車旅行者入住（多數有單車存放處）。</p>
+      <div class="card-title">🏠 沿途青年旅舍（YHA / Hostelling International）</div>
+      <p>以下係沿 EV15 路線各大城市嘅青年旅舍連結，方便你 plan 住宿。全部屬於國際青年旅舍聯盟 / HI 成員，質素穩定，適合單車旅行者入住（多數有單車存放處）。</p>
 
       <div style="margin-top:12px;">
-        <h4 style="color:var(--snow);font-size:0.85rem;margin-bottom:6px;" data-i18n="hostels-switzerland">🇨🇭 瑞士 — Schweizer Jugendherbergen</h4>
+        <h4 style="color:var(--snow);font-size:0.85rem;margin-bottom:6px;">🇨🇭 瑞士 — Schweizer Jugendherbergen</h4>
         <ul style="padding-left:18px; font-size:0.82rem; color:var(--text-muted); line-height:2;">
           <li>🏔️ <strong>Andermatt</strong> – 最近可住 <a href="https://www.youthhostel.ch/en/hostels/lucerne/" target="_blank" style="color:var(--sky-light);">Luzern Youth Hostel</a>（起點後第一站）</li>
           <li>🏙️ <strong>Luzern</strong> – <a href="https://www.youthhostel.ch/en/hostels/lucerne/" target="_blank" style="color:var(--sky-light);">Luzern Youth Hostel</a>（湖畔，單車友好）</li>
@@ -308,14 +303,14 @@
       </div>
 
       <div style="margin-top:12px;">
-        <h4 style="color:var(--snow);font-size:0.85rem;margin-bottom:6px;" data-i18n="hostels-france">🇫🇷 法國阿爾薩斯</h4>
+        <h4 style="color:var(--snow);font-size:0.85rem;margin-bottom:6px;">🇫🇷 法國阿爾薩斯</h4>
         <ul style="padding-left:18px; font-size:0.82rem; color:var(--text-muted); line-height:2;">
           <li>🏙️ <strong>Strasbourg</strong> – <a href="https://www.hihostels.com/en/hostels/hi-strasbourg-2-cigogne" target="_blank" style="color:var(--sky-light);">HI Strasbourg — 2 Cigogne</a>（近大教堂同小法國區）</li>
         </ul>
       </div>
 
       <div style="margin-top:12px;">
-        <h4 style="color:var(--snow);font-size:0.85rem;margin-bottom:6px;" data-i18n="hostels-germany">🇩🇪 德國 — DJH Jugendherbergen</h4>
+        <h4 style="color:var(--snow);font-size:0.85rem;margin-bottom:6px;">🇩🇪 德國 — DJH Jugendherbergen</h4>
         <ul style="padding-left:18px; font-size:0.82rem; color:var(--text-muted); line-height:2;">
           <li>🏙️ <strong>Karlsruhe</strong> – <a href="https://www.jugendherberge.de/en/youth-hostels/karlsruhe/" target="_blank" style="color:var(--sky-light);">Jugendherberge Karlsruhe</a></li>
           <li>🏰 <strong>Heidelberg</strong> – <a href="https://www.jugendherberge.de/en/youth-hostels/heidelberg-international/" target="_blank" style="color:var(--sky-light);">Jugendherberge Heidelberg International</a>（略偏離路線，值得一訪）</li>
@@ -330,7 +325,7 @@
       </div>
 
       <div style="margin-top:12px;">
-        <h4 style="color:var(--snow);font-size:0.85rem;margin-bottom:6px;" data-i18n="hostels-netherlands">🇳🇱 荷蘭 — Stayokay</h4>
+        <h4 style="color:var(--snow);font-size:0.85rem;margin-bottom:6px;">🇳🇱 荷蘭 — Stayokay</h4>
         <ul style="padding-left:18px; font-size:0.82rem; color:var(--text-muted); line-height:2;">
           <li>🏙️ <strong>Nijmegen</strong> – <a href="https://www.stayokay.com/en/location/nijmegen" target="_blank" style="color:var(--sky-light);">Stayokay Nijmegen</a></li>
           <li>🌳 <strong>Arnhem</strong> – <a href="https://www.stayokay.com/en/location/arnhem" target="_blank" style="color:var(--sky-light);">Stayokay Arnhem</a></li>
@@ -347,10 +342,10 @@
 
   <!-- ===================== EBIKE LEGALITY ===================== -->
   <section class="section" id="ebike">
-    <h2 class="section-title" data-i18n="sec-ebike">電動單車各國法例</h2>
+    <h2 class="section-title">電動單車各國法例</h2>
 
     <div class="card">
-      <div class="card-title" data-i18n="card-eu-standard">歐盟統一標準（適用於德國、法國、荷蘭）</div>
+      <div class="card-title">歐盟統一標準（適用於德國、法國、荷蘭）</div>
       <p>根據歐盟法規 (EU) No 168/2013，只要你的電動輔助單車符合以下條件，就視為一般單車，<strong>無需車牌、保險、頭盔</strong>，可在所有單車徑合法行駛：</p>
       <ul style="padding-left:18px; margin-top:8px;">
         <li>✅ 最大功率 ≤ 250W</li>
@@ -407,7 +402,7 @@
     </div>
 
     <div class="card">
-      <div class="card-title" data-i18n="card-ebike-warning">⚠️ 重要提醒</div>
+      <div class="card-title">⚠️ 重要提醒</div>
       <p>若你使用 <strong>350W 套件</strong>：</p>
       <ul style="padding-left:18px; margin-top:6px;">
         <li>🇨🇭 瑞士：✅ 仍然合法（500W 以下為「輕型電單車」，16歲以上無需牌照）</li>
@@ -419,7 +414,7 @@
 
   <!-- ===================== CONVERSION KIT ===================== -->
   <section class="section" id="kit">
-    <h2 class="section-title" data-i18n="sec-kit">改裝套件比較</h2>
+    <h2 class="section-title">改裝套件比較</h2>
 
     <div class="table-wrap">
       <table>
@@ -464,7 +459,7 @@
     </div>
 
     <div class="card" style="border-color: var(--moss);">
-      <div class="card-title" data-i18n="card-kit-recommend">🏆 最佳推薦：Yose Power 36V 250W 28" (700C) 前輪轂套件</div>
+      <div class="card-title">🏆 最佳推薦：Yose Power 36V 250W 28" (700C) 前輪轂套件</div>
       <p>
         <strong>價格：</strong>€449（含 18Ah 電池，約 HK$3,800）<br>
         <strong>重量：</strong>電機約 3kg + 電池約 2.5kg<br>
@@ -480,41 +475,41 @@
 
   <!-- ===================== CHECKLIST ===================== -->
   <section class="section" id="checklist">
-    <h2 class="section-title" data-i18n="sec-checklist">行李清單</h2>
+    <h2 class="section-title">行李清單</h2>
     <p class="text-small text-muted mb-2">✓ 點選已完成項目 · 自動儲存進度</p>
 
     <div class="card" id="checklist-container">
-      <div class="card-title" data-i18n="card-bike-gear">📦 單車裝備</div>
+      <div class="card-title">📦 單車裝備</div>
       <div id="group-bike" class="checklist-group"></div>
     </div>
 
     <div class="card">
-      <div class="card-title" data-i18n="card-camp-gear">🏕️ 露營裝備</div>
+      <div class="card-title">🏕️ 露營裝備</div>
       <div id="group-camp" class="checklist-group"></div>
     </div>
 
     <div class="card">
-      <div class="card-title" data-i18n="card-clothes">👕 衣物</div>
+      <div class="card-title">👕 衣物</div>
       <div id="group-clothes" class="checklist-group"></div>
     </div>
 
     <div class="card">
-      <div class="card-title" data-i18n="card-tools">🔧 工具與維修</div>
+      <div class="card-title">🔧 工具與維修</div>
       <div id="group-tools" class="checklist-group"></div>
     </div>
 
     <div class="card">
-      <div class="card-title" data-i18n="card-electronics">📱 電子設備</div>
+      <div class="card-title">📱 電子設備</div>
       <div id="group-electronics" class="checklist-group"></div>
     </div>
 
     <div class="card">
-      <div class="card-title" data-i18n="card-documents">📄 證件與文件</div>
+      <div class="card-title">📄 證件與文件</div>
       <div id="group-docs" class="checklist-group"></div>
     </div>
 
     <div class="card">
-      <div class="card-title" data-i18n="card-camera">🎥 拍攝裝備</div>
+      <div class="card-title">🎥 拍攝裝備</div>
       <div id="group-video" class="checklist-group"></div>
     </div>
 
@@ -529,7 +524,7 @@
 
   <!-- ===================== TIMELINE ===================== -->
   <section class="section" id="timeline">
-    <h2 class="section-title" data-i18n="sec-timeline">出發倒數</h2>
+    <h2 class="section-title">出發倒數</h2>
 
     <div class="countdown" id="countdown">
       <div class="countdown-box"><div class="num" id="cd-days">--</div><div class="label">天</div></div>
@@ -539,17 +534,17 @@
     </div>
 
     <div class="card">
-      <div class="card-title" data-i18n="card-timeline">🗓️ 準備時間線</div>
+      <div class="card-title">🗓️ 準備時間線</div>
       <div class="timeline" id="timeline-container"></div>
     </div>
   </section>
 
   <!-- ===================== SUPPLIES ===================== -->
   <section class="section" id="supplies">
-    <h2 class="section-title" data-i18n="sec-supplies">補給與物資</h2>
+    <h2 class="section-title">補給與物資</h2>
 
     <div class="card">
-      <div class="card-title" data-i18n="card-supply-points">🛒 沿途補給點</div>
+      <div class="card-title">🛒 沿途補給點</div>
       <p>EV15 萊茵河路線沿途經過大量城鎮，補給非常方便：</p>
       <ul style="padding-left:18px; margin-top:6px;">
         <li><strong>瑞士段</strong> — Andermatt、Luzern、Basel：超市（Coop、Migros）密集，每 10–20 公里有補給點</li>
@@ -561,7 +556,7 @@
     </div>
 
     <div class="card">
-      <div class="card-title" data-i18n="card-charging">⚡ 電動單車充電攻略</div>
+      <div class="card-title">⚡ 電動單車充電攻略</div>
       <ul style="padding-left:18px; margin-top:6px;">
         <li><strong>露營營地：</strong>大部分 Campingplatz 提供電源插座（歐標 Type C/F）</li>
         <li><strong>餐廳/Café：</strong>入內飲一杯咖啡，請求借用插座充電（德國/Swiss 大部分很樂意）</li>
@@ -572,7 +567,7 @@
     </div>
 
     <div class="card">
-      <div class="card-title" data-i18n="card-water">💧 飲水與食物</div>
+      <div class="card-title">💧 飲水與食物</div>
       <ul style="padding-left:18px; margin-top:6px;">
         <li>德國和瑞士自來水可直接飲用（Trinkwasser）。荷蘭水質也良好。</li>
         <li>沿途城鎮有大量飲水噴泉（尤其在德國和瑞士）。</li>
@@ -584,10 +579,10 @@
 
   <!-- ===================== SAFETY ===================== -->
   <section class="section" id="safety">
-    <h2 class="section-title" data-i18n="sec-safety">安全與緊急聯絡</h2>
+    <h2 class="section-title">安全與緊急聯絡</h2>
 
     <div class="card" style="border-color: var(--danger);">
-      <div class="card-title" data-i18n="card-emergency">🆘 緊急電話</div>
+      <div class="card-title">🆘 緊急電話</div>
       <div class="emergency-grid">
         <div class="emergency-item">
           <div class="country">🇪🇺 歐盟通用</div>
@@ -613,7 +608,7 @@
     </div>
 
     <div class="card">
-      <div class="card-title" data-i18n="card-risk">🛡️ 安全風險評估</div>
+      <div class="card-title">🛡️ 安全風險評估</div>
       <div class="table-wrap">
         <table>
           <thead>
@@ -632,7 +627,7 @@
     </div>
 
     <div class="card">
-      <div class="card-title" data-i18n="card-theft">🔐 單車防盜建議</div>
+      <div class="card-title">🔐 單車防盜建議</div>
       <ol style="padding-left:18px; margin-top:6px;">
         <li>使用 <strong>U 型鎖</strong>（建議 Abus 或 Kryptonite，非鋼纜鎖）</li>
         <li>睡覺時將單車帶入帳篷或房間</li>
@@ -643,7 +638,7 @@
     </div>
 
     <div class="card">
-      <div class="card-title" data-i18n="card-riding-safety">🌤️ 騎行安全</div>
+      <div class="card-title">🌤️ 騎行安全</div>
       <ul style="padding-left:18px; margin-top:6px;">
         <li>歐洲車輛靠右行駛（與香港相同）</li>
         <li>夜間必須安裝前後燈（法律要求）</li>
@@ -656,10 +651,10 @@
 
   <!-- ===================== VIDEO GEAR ===================== -->
   <section class="section" id="video">
-    <h2 class="section-title" data-i18n="sec-video">🎥 iPhone 拍攝裝備清單</h2>
+    <h2 class="section-title">🎥 iPhone 拍攝裝備清單</h2>
 
     <div class="card">
-      <div class="card-title" data-i18n="card-phone-setup">📱 手機拍攝設定</div>
+      <div class="card-title">📱 手機拍攝設定</div>
       <ul style="padding-left:18px; margin-top:6px;">
         <li><strong>主要相機：</strong>iPhone（建議使用 ProRes 或 HEVC 編碼，1080p 60fps 或 4K 30fps）</li>
         <li><strong>拍攝模式：</strong>使用「動作模式」(Action Mode) 減少震動</li>
@@ -669,7 +664,7 @@
     </div>
 
     <div class="card">
-      <div class="card-title" data-i18n="card-recommended-gear">🎒 推薦裝備</div>
+      <div class="card-title">🎒 推薦裝備</div>
       <div class="table-wrap">
         <table>
           <thead>
@@ -689,7 +684,7 @@
     </div>
 
     <div class="card">
-      <div class="card-title" data-i18n="card-shooting-plan">🎬 拍攝計劃建議</div>
+      <div class="card-title">🎬 拍攝計劃建議</div>
       <ul style="padding-left:18px; margin-top:6px;">
         <li><strong>每日 vlog：</strong>5–10 分鐘：出發 → 風景 → 午餐 → 營地</li>
         <li><strong>B-roll：</strong>萊茵河景、騎行視角、城堡/葡萄園、露營 setup</li>
@@ -705,13 +700,13 @@
 
 <!-- ===================== FEEDBACK ===================== -->
   <section class="section" id="feedback">
-    <h2 class="section-title" data-i18n="sec-feedback">💬 意見回饋</h2>
+    <h2 class="section-title">💬 意見回饋</h2>
     <p class="text-muted mb-2" style="font-size:0.82rem;">發現有錯漏？有好建議？歡迎喺 Facebook 留言或 inbox 我！</p>
 
     <div class="contact-buttons">
       <a href="https://www.facebook.com/davy8807" class="contact-btn btn-facebook" target="_blank" rel="noopener">
         <span class="contact-icon">📘</span>
-        <span class="contact-label" data-i18n="contact-facebook-label">Facebook</span>
+        <span class="contact-label">Facebook</span>
         <span class="contact-detail">Davy CHAN</span>
       </a>
     </div>
@@ -1162,848 +1157,6 @@
 
 console.log('🚲 Rhine Travel Prep loaded. Safe travels! 🦞');
 </script>
-
-
-// ---- I18N Bilingual Support ----
-(function() {
-  var data = {
-"hero-title": [
-"🚲 萊茵河單車露營之旅",
-"🚲 Rhine Cycle Camping Trip"
-],
-"hero-subtitle": [
-"EuroVelo 15 · 瑞士安德馬特 → 荷蘭北海 · 約 1,450 公里",
-"EuroVelo 15 · Andermatt (Switzerland) → North Sea (Netherlands) · ~1,450 km"
-],
-"hero-meta-1": [
-"📅 2027 年 5 月 · 2–3 星期",
-"📅 May 2027 · 2–3 weeks"
-],
-"hero-meta-2": [
-"⚡ 電動輔助單車",
-"⚡ Electric-assisted bicycle"
-],
-"hero-meta-3": [
-"🏕️ 全程露營",
-"🏕️ Camping throughout"
-],
-"nav-scenic": [
-"📸 風光",
-"📸 Gallery"
-],
-"nav-route": [
-"🗺️ 路線",
-"🗺️ Route"
-],
-"nav-hostels": [
-"🏠 旅舍",
-"🏠 Hostels"
-],
-"nav-ebike": [
-"⚡ 法例",
-"⚡ Laws"
-],
-"nav-kit": [
-"🔧 套件",
-"🔧 Kit"
-],
-"nav-checklist": [
-"✅ 清單",
-"✅ Checklist"
-],
-"nav-timeline": [
-"⏱️ 時間線",
-"⏱️ Timeline"
-],
-"nav-supplies": [
-"🛒 補給",
-"🛒 Supplies"
-],
-"nav-safety": [
-"🛡️ 安全",
-"🛡️ Safety"
-],
-"nav-video": [
-"🎥 拍攝",
-"🎥 Gear"
-],
-"nav-feedback": [
-"📬 聯絡",
-"📬 Contact"
-],
-"sec-scenic": [
-"🏔️ 沿途風光",
-"🏔️ Scenic Gallery"
-],
-"sec-route": [
-"路線概覽",
-"Route Overview"
-],
-"sec-hostels": [
-"沿途青年旅舍",
-"Youth Hostels Along the Route"
-],
-"sec-ebike": [
-"電動單車各國法例",
-"E-Bike Laws by Country"
-],
-"sec-kit": [
-"改裝套件比較",
-"Conversion Kit Comparison"
-],
-"sec-checklist": [
-"行李清單",
-"Packing Checklist"
-],
-"sec-timeline": [
-"出發倒數",
-"Countdown & Timeline"
-],
-"sec-supplies": [
-"補給與物資",
-"Supplies & Amenities"
-],
-"sec-safety": [
-"安全與緊急聯絡",
-"Safety & Emergency Contacts"
-],
-"sec-video": [
-"🎥 iPhone 拍攝裝備清單",
-"🎥 iPhone Filming Gear"
-],
-"sec-feedback": [
-"💬 意見回饋",
-"💬 Feedback & Contact"
-],
-"card-route-overview": [
-"EuroVelo 15 — 萊茵河路線",
-"EuroVelo 15 — Rhine Route"
-],
-"card-route-start": [
-"起點：",
-"Start:"
-],
-"card-route-end": [
-"終點：",
-"End:"
-],
-"card-route-length": [
-"路線長度：",
-"Route length:"
-],
-"card-route-countries": [
-"途經國家：",
-"Countries:"
-],
-"card-route-duration": [
-"建議行程：",
-"Suggested duration:"
-],
-"card-route-tip": [
-"💡 使用電動輔助 (pedelec) 每日可輕鬆騎行 80–100+ 公里，包括上坡路段。",
-"💡 With e-bike assist (pedelec) you can comfortably ride 80–100+ km/day, including climbs."
-],
-"card-route-start-val": [
-"瑞士安德馬特 (Andermatt) — 萊茵河源頭",
-"Andermatt, Switzerland — Rhine River Source"
-],
-"card-route-end-val": [
-"荷蘭鹿特丹 (Rotterdam) — 北海海岸",
-"Rotterdam, Netherlands — North Sea Coast"
-],
-"card-route-length-val": [
-"約 1,450 公里（官方標示 1,233 公里，含改道約 1,450 公里）",
-"~1,450 km (official: 1,233 km, with detours ~1,450 km)"
-],
-"card-route-countries-val": [
-"🇨🇭 瑞士 → 🇫🇷 法國（阿爾薩斯） → 🇩🇪 德國 → 🇳🇱 荷蘭",
-"🇨🇭 Switzerland → 🇫🇷 France (Alsace) → 🇩🇪 Germany → 🇳🇱 Netherlands"
-],
-"card-route-duration-val": [
-"14–21 天，每日騎行約 70–100 公里",
-"14–21 days, riding ~70–100 km/day"
-],
-"card-segments": [
-"主要路段一覽",
-"Route Segments"
-],
-"seg-th-segment": [
-"路段",
-"Segment"
-],
-"seg-th-country": [
-"國家",
-"Country"
-],
-"seg-th-dist": [
-"距離",
-"Distance"
-],
-"seg-th-difficulty": [
-"難度",
-"Difficulty"
-],
-"seg-th-highlight": [
-"特色",
-"Highlights"
-],
-"seg-1": [
-"Andermatt → Basel",
-"Andermatt → Basel"
-],
-"seg-1-country": [
-"🇨🇭",
-"🇨🇭"
-],
-"seg-1-dist": [
-"~230 km",
-"~230 km"
-],
-"seg-1-diff": [
-"中等",
-"Moderate"
-],
-"seg-1-hl": [
-"阿爾卑斯山區，上坡多",
-"Alpine terrain, many climbs"
-],
-"seg-2": [
-"Basel → Strasbourg",
-"Basel → Strasbourg"
-],
-"seg-2-country": [
-"🇨🇭→🇫🇷",
-"🇨🇭→🇫🇷"
-],
-"seg-2-dist": [
-"~140 km",
-"~140 km"
-],
-"seg-2-diff": [
-"輕鬆",
-"Easy"
-],
-"seg-2-hl": [
-"萊茵河平原、阿爾薩斯酒鄉",
-"Rhine plain, Alsace wine region"
-],
-"seg-3": [
-"Strasbourg → Mainz",
-"Strasbourg → Mainz"
-],
-"seg-3-country": [
-"🇫🇷→🇩🇪",
-"🇫🇷→🇩🇪"
-],
-"seg-3-dist": [
-"~260 km",
-"~260 km"
-],
-"seg-3-diff": [
-"輕鬆",
-"Easy"
-],
-"seg-3-hl": [
-"城堡之路、普法爾茨地區",
-"Castle route, Palatinate region"
-],
-"seg-4": [
-"Mainz → Köln",
-"Mainz → Köln"
-],
-"seg-4-country": [
-"🇩🇪",
-"🇩🇪"
-],
-"seg-4-dist": [
-"~200 km",
-"~200 km"
-],
-"seg-4-diff": [
-"輕鬆",
-"Easy"
-],
-"seg-4-hl": [
-"萊茵峽谷、中萊茵 UNESCO 世界遺產",
-"Rhine Gorge, Middle Rhine UNESCO World Heritage"
-],
-"seg-5": [
-"Köln → Rotterdam",
-"Köln → Rotterdam"
-],
-"seg-5-country": [
-"🇩🇪→🇳🇱",
-"🇩🇪→🇳🇱"
-],
-"seg-5-dist": [
-"~350 km",
-"~350 km"
-],
-"seg-5-diff": [
-"輕鬆",
-"Easy"
-],
-"seg-5-hl": [
-"魯爾區、荷蘭低地單車徑",
-"Ruhr area, Dutch lowland cycle paths"
-],
-"card-hostels-title": [
-"🏠 沿途青年旅舍（YHA / Hostelling International）",
-"🏠 Youth Hostels (YHA / Hostelling International)"
-],
-"card-hostels-desc": [
-"以下係沿 EV15 路線各大城市嘅青年旅舍連結，方便你 plan 住宿。全部屬於國際青年旅舍聯盟 / HI 成員，質素穩定，適合單車旅行者入住（多數有單車存放處）。",
-"Here are youth hostels along the EV15 route — all are Hostelling International members with bike storage at most locations."
-],
-"hostels-switzerland": [
-"🇨🇭 瑞士 — Schweizer Jugendherbergen",
-"🇨🇭 Switzerland — Swiss Youth Hostels"
-],
-"hostels-france": [
-"🇫🇷 法國阿爾薩斯",
-"🇫🇷 France (Alsace)"
-],
-"hostels-germany": [
-"🇩🇪 德國 — DJH Jugendherbergen",
-"🇩🇪 Germany — DJH Youth Hostels"
-],
-"hostels-netherlands": [
-"🇳🇱 荷蘭 — Stayokay",
-"🇳🇱 Netherlands — Stayokay"
-],
-"hostels-andermatt": [
-"🏔️ Andermatt – 最近可住 Luzern Youth Hostel（起點後第一站）",
-"🏔️ Andermatt – Closest is Luzern Youth Hostel (first stop after start)"
-],
-"hostels-luzern": [
-"🏙️ Luzern – Luzern Youth Hostel（湖畔，單車友好）",
-"🏙️ Luzern – Luzern Youth Hostel (lakeside, bike-friendly)"
-],
-"hostels-basel": [
-"🏙️ Basel – Basel Youth Hostel（近火車站，方便過境）",
-"🏙️ Basel – Basel Youth Hostel (near train station, easy border crossing)"
-],
-"hostels-strasbourg": [
-"🏙️ Strasbourg – HI Strasbourg — 2 Cigogne（近大教堂同小法國區）",
-"🏙️ Strasbourg – HI Strasbourg — 2 Cigogne (near cathedral & Petite France)"
-],
-"hostels-heidelberg": [
-"🏰 Heidelberg – Jugendherberge Heidelberg International（略偏離路線，值得一訪）",
-"🏰 Heidelberg – Youth Hostel Heidelberg International (slight detour, worth it)"
-],
-"hostels-tip": [
-"💡 德國 DJH 同瑞士 SJ 通常有單車存放室，部分可免費借用維修工具。建議提前網上預訂，5月係旺季。",
-"💡 German DJH & Swiss SJ hostels usually have bike storage; some offer free repair tools. Book ahead — May is peak season."
-],
-"hostels-member": [
-"📌 Hostelling International（HI）會員享折扣，可在出發前於 hihostels.com 購買會籍。",
-"📌 HI members get discounts. Buy membership before departure at hihostels.com."
-],
-"card-eu-standard": [
-"歐盟統一標準（適用於德國、法國、荷蘭）",
-"EU Standard (Germany, France, Netherlands)"
-],
-"ebike-eu-desc": [
-"根據歐盟法規 (EU) No 168/2013，只要你的電動輔助單車符合以下條件，就視為一般單車，",
-"Under EU Regulation 168/2013, your e-bike is legally a bicycle if it meets:"
-],
-"ebike-eu-desc2": [
-"可在所有單車徑合法行駛：",
-"and can use all bike paths:"
-],
-"ebike-eu-1": [
-"✅ 最大功率 ≤ 250W",
-"✅ Max power ≤ 250W"
-],
-"ebike-eu-2": [
-"✅ 輔助速度上限 25 km/h",
-"✅ Assist cuts off at 25 km/h"
-],
-"ebike-eu-3": [
-"✅ 必須踩踏才有輔助（非油門驅動）",
-"✅ Pedal-assist only (no throttle)"
-],
-"ebike-eu-4": [
-"✅ 符合 EN 15194 歐洲安全標準",
-"✅ Compliant with EN 15194 safety standard"
-],
-"ebike-th-country": [
-"國家",
-"Country"
-],
-"ebike-th-power": [
-"功率上限",
-"Max Power"
-],
-"ebike-th-speed": [
-"速度上限",
-"Max Speed"
-],
-"ebike-th-helmet": [
-"頭盔",
-"Helmet"
-],
-"ebike-th-license": [
-"車牌/保險",
-"Plate/Insurance"
-],
-"ebike-th-path": [
-"單車徑",
-"Cycle Paths"
-],
-"ebike-th-notes": [
-"備註",
-"Notes"
-],
-"ebike-swiss": [
-"🇨🇭 瑞士",
-"🇨🇭 Switzerland"
-],
-"ebike-swiss-power": [
-"500W",
-"500W"
-],
-"ebike-swiss-speed": [
-"25 km/h",
-"25 km/h"
-],
-"ebike-swiss-helmet": [
-"❌ 不需",
-"❌ Not required"
-],
-"ebike-swiss-license": [
-"❌ 不需",
-"❌ Not required"
-],
-"ebike-swiss-path": [
-"✅ 可以",
-"✅ Allowed"
-],
-"ebike-swiss-notes": [
-"16歲以上無需駕駛執照<br>非歐盟但法規更寬鬆",
-"No license needed (16+).<br>Not EU but more lenient."
-],
-"ebike-germany": [
-"🇩🇪 德國",
-"🇩🇪 Germany"
-],
-"ebike-germany-power": [
-"250W",
-"250W"
-],
-"ebike-germany-speed": [
-"25 km/h",
-"25 km/h"
-],
-"ebike-germany-helmet": [
-"❌ 不需",
-"❌ Not required"
-],
-"ebike-germany-license": [
-"❌ 不需",
-"❌ Not required"
-],
-"ebike-germany-path": [
-"✅ 可以",
-"✅ Allowed"
-],
-"ebike-germany-notes": [
-"對改裝執法嚴格<br>S-pedelec 需車牌",
-"Strict on modifications.<br>S-pedelec needs plates."
-],
-"ebike-france": [
-"🇫🇷 法國",
-"🇫🇷 France"
-],
-"ebike-france-power": [
-"250W",
-"250W"
-],
-"ebike-france-speed": [
-"25 km/h",
-"25 km/h"
-],
-"ebike-france-helmet": [
-"❌ 不需",
-"❌ Not required"
-],
-"ebike-france-license": [
-"❌ 不需",
-"❌ Not required"
-],
-"ebike-france-path": [
-"✅ 可以",
-"✅ Allowed"
-],
-"ebike-france-notes": [
-"阿爾薩斯單車徑完善",
-"Alsace has great bike paths."
-],
-"ebike-netherlands": [
-"🇳🇱 荷蘭",
-"🇳🇱 Netherlands"
-],
-"ebike-netherlands-power": [
-"250W",
-"250W"
-],
-"ebike-netherlands-speed": [
-"25 km/h",
-"25 km/h"
-],
-"ebike-netherlands-helmet": [
-"❌ 不需",
-"❌ Not required"
-],
-"ebike-netherlands-license": [
-"❌ 不需",
-"❌ Not required"
-],
-"ebike-netherlands-path": [
-"✅ 可以",
-"✅ Allowed"
-],
-"ebike-netherlands-notes": [
-"世界最佳單車網絡<br>改裝執法極嚴",
-"World's best cycle network.<br>Very strict on mods."
-],
-"card-ebike-warning": [
-"⚠️ 重要提醒",
-"⚠️ Important Reminder"
-],
-"ebike-warning-intro": [
-"若你使用 350W 套件：",
-"If you use a 350W kit:"
-],
-"ebike-warning-swiss": [
-"🇨🇭 瑞士：✅ 仍然合法（500W 以下為「輕型電單車」，16歲以上無需牌照）",
-"🇨🇭 Switzerland: ✅ Legal (under 500W = 'light motorbicycle', no license if 16+)"
-],
-"ebike-warning-eu": [
-"🇩🇪 / 🇫🇷 / 🇳🇱：❌ 理論上超標（使用高功率套件須以 S-pedelec 規格登記，包括車牌、保險、頭盔）",
-"🇩🇪 / 🇫🇷 / 🇳🇱: ❌ Exceeds limit (would need S-pedelec registration with plate, insurance, helmet)"
-],
-"ebike-warning-recommend": [
-"建議：將套件設定在 250W/25km/h 模式以符合四國法例。瑞士的 500W 上限提供緩衝，但建議全程保持 250W 設定以免在歐盟國家有麻煩。",
-"Recommendation: keep your kit at 250W/25km/h for all four countries. Switzerland's 500W limit gives you buffer, but stay at 250W to avoid trouble in the EU."
-],
-"kit-th-name": [
-"套件",
-"Kit"
-],
-"kit-th-type": [
-"類型",
-"Type"
-],
-"kit-th-price": [
-"價格 (EUR)",
-"Price (EUR)"
-],
-"kit-th-weight": [
-"重量",
-"Weight"
-],
-"kit-th-suit": [
-"適合旅行",
-"Travel Ready"
-],
-"kit-th-buy": [
-"購買",
-"Purchase"
-],
-"kit-yose": [
-"Yose Power 250W",
-"Yose Power 250W"
-],
-"kit-yose-type": [
-"前輪轂",
-"Front Hub"
-],
-"kit-yose-price": [
-"€209–€449",
-"€209–€449"
-],
-"kit-yose-weight": [
-"~4.5 kg",
-"~4.5 kg"
-],
-"kit-yose-suit": [
-"推薦",
-"Recommended"
-],
-"kit-yose-buy": [
-"yosepower.com<br>寄送到香港",
-"yosepower.com<br>Ships to Hong Kong"
-],
-"kit-bafang": [
-"Bafang BBS01B 250W",
-"Bafang BBS01B 250W"
-],
-"kit-bafang-type": [
-"中置電機",
-"Mid-Drive"
-],
-"kit-bafang-price": [
-"€350–€500",
-"€350–€500"
-],
-"kit-bafang-weight": [
-"~4 kg",
-"~4 kg"
-],
-"kit-bafang-suit": [
-"推薦",
-"Recommended"
-],
-"kit-bafang-buy": [
-"Amazon / 授權經銷商",
-"Amazon / Authorized dealers"
-],
-"kit-tongsheng": [
-"Tongsheng TSDZ2 250W",
-"Tongsheng TSDZ2 250W"
-],
-"kit-tongsheng-type": [
-"中置電機",
-"Mid-Drive"
-],
-"kit-tongsheng-price": [
-"€280–€400",
-"€280–€400"
-],
-"kit-tongsheng-weight": [
-"~3.5 kg",
-"~3.5 kg"
-],
-"kit-tongsheng-suit": [
-"可考慮",
-"Consider"
-],
-"kit-tongsheng-buy": [
-"PSWPower / AliExpress",
-"PSWPower / AliExpress"
-],
-"kit-swytch": [
-"Swytch Kit",
-"Swytch Kit"
-],
-"kit-swytch-type": [
-"前輪轂（快拆）",
-"Front Hub (Quick-Release)"
-],
-"kit-swytch-price": [
-"€499–€799",
-"€499–€799"
-],
-"kit-swytch-weight": [
-"~3 kg",
-"~3 kg"
-],
-"kit-swytch-suit": [
-"超預算",
-"Over Budget"
-],
-"kit-swytch-buy": [
-"swytchbike.com",
-"swytchbike.com"
-],
-"card-kit-recommend": [
-"🏆 最佳推薦：Yose Power 36V 250W 28\" (700C) 前輪轂套件",
-"🏆 Best Pick: Yose Power 36V 250W 28\" (700C) Front Hub Kit"
-],
-"kit-recommend-price": [
-"價格：€449（含 18Ah 電池，約 HK$3,800）",
-"Price: €449 (incl. 18Ah battery, ~HK$3,800)"
-],
-"kit-recommend-weight": [
-"重量：電機約 3kg + 電池約 2.5kg",
-"Weight: motor ~3kg + battery ~2.5kg"
-],
-"kit-recommend-range": [
-"續航：18Ah 約 60–80 公里（足夠一日騎行）",
-"Range: 18Ah ~60–80 km (enough for a day's ride)"
-],
-"kit-recommend-convert": [
-"轉換性：可快拆前輪 + 快拆電池座，數分鐘轉換 ebike ↔ 普通單車",
-"Convertible: quick-release front wheel + battery mount, swap ebike ⇄ regular bike in minutes"
-],
-"kit-recommend-buy": [
-"購買渠道：在香港透過 Yose Power 官網或 AliExpress 購買，出發前安裝好",
-"Buy from Yose Power website or AliExpress, delivered to Hong Kong, install before departure"
-],
-"kit-recommend-tip": [
-"💡 建議攜帶備用內胎、扭矩臂和基本工具。電池需隨身攜帶上機（鋰電池航空託運限制）。",
-"💡 Pack spare inner tubes, torque arms, and basic tools. Carry battery in hand luggage (lithium flight restrictions)."
-],
-"card-bike-gear": [
-"📦 單車裝備",
-"📦 Bike Gear"
-],
-"card-camp-gear": [
-"🏕️ 露營裝備",
-"🏕️ Camping Gear"
-],
-"card-clothes": [
-"👕 衣物",
-"👕 Clothing"
-],
-"card-tools": [
-"🔧 工具與維修",
-"🔧 Tools & Repair"
-],
-"card-electronics": [
-"📱 電子設備",
-"📱 Electronics"
-],
-"card-documents": [
-"📄 證件與文件",
-"📄 Documents"
-],
-"card-camera": [
-"🎥 拍攝裝備",
-"🎥 Camera Gear"
-],
-"card-timeline": [
-"🗓️ 準備時間線",
-"🗓️ Preparation Timeline"
-],
-"card-supply-points": [
-"🛒 沿途補給點",
-"🛒 Supply Points Along Route"
-],
-"supply-desc": [
-"EV15 萊茵河路線沿途經過大量城鎮，補給非常方便：",
-"The EV15 Rhine route passes through many towns. Supplies are readily available:"
-],
-"card-charging": [
-"⚡ 電動單車充電攻略",
-"⚡ E-Bike Charging Guide"
-],
-"card-water": [
-"💧 飲水與食物",
-"💧 Water & Food"
-],
-"card-emergency": [
-"🆘 緊急電話",
-"🆘 Emergency Numbers"
-],
-"card-risk": [
-"🛡️ 安全風險評估",
-"🛡️ Safety Risk Assessment"
-],
-"card-theft": [
-"🔐 單車防盜建議",
-"🔐 Bike Theft Prevention"
-],
-"card-riding-safety": [
-"🌤️ 騎行安全",
-"🌤️ Riding Safety"
-],
-"card-phone-setup": [
-"📱 手機拍攝設定",
-"📱 Phone Camera Setup"
-],
-"card-recommended-gear": [
-"🎒 推薦裝備",
-"🎒 Recommended Gear"
-],
-"card-shooting-plan": [
-"🎬 拍攝計劃建議",
-"🎬 Shooting Plan Tips"
-],
-"contact-facebook-label": [
-"Facebook",
-"Facebook"
-],
-"contact-facebook-detail": [
-"Davy CHAN",
-"Davy CHAN"
-],
-"contact-email-label": [
-"📧 Email",
-"📧 Email"
-],
-"contact-email-detail": [
-"davy8807@gmail.com",
-"davy8807@gmail.com"
-],
-"music-label": [
-"背景音樂",
-"Background Music"
-],
-"music-play": [
-"🎵 背景音樂",
-"🎵 BGM"
-],
-"music-pause": [
-"暫停音樂",
-"Pause Music"
-],
-"music-loading": [
-"載入中…",
-"Loading…"
-],
-"scenic-subtitle": [
-"滑動瀏覽萊茵河路線上的經典景觀",
-"Swipe through iconic Rhine landscapes"
-],
-"scenic-andermatt-label": [
-"🏔️ 萊茵河源頭",
-"🏔️ Rhine River Source"
-],
-"scenic-andermatt-city": [
-"Andermatt",
-"Andermatt"
-],
-"scenic-andermatt-desc": [
-"阿爾卑斯山區起點 · 萊茵河發源地",
-"Alpine start · River Rhine source"
-],
-"scenic-andermatt-arrow": [
-"← 起點",
-"← Start"
-],
-"scenic-luzern-label": [
-"🇨🇭 琉森湖",
-"🇨🇭 Lake Lucerne"
-]
-};
-
-  // Store original zh text on elements that have data-i18n
-  function init() {
-    document.querySelectorAll('[data-i18n]').forEach(function(el) {
-      var key = el.getAttribute('data-i18n');
-      if (data[key]) {
-        el.setAttribute('data-i18n-zh', data[key][0]);
-      }
-    });
-  }
-
-  function setLang(lang) {
-    document.querySelectorAll('[data-i18n]').forEach(function(el) {
-      var key = el.getAttribute('data-i18n');
-      if (data[key] && data[key][1]) {
-        el.textContent = (lang === 'en') ? data[key][1] : data[key][0];
-      }
-    });
-    document.querySelectorAll('.lang-btn').forEach(function(b) {
-      b.classList.toggle('active', b.getAttribute('data-lang') === lang);
-    });
-  }
-
-  // Toggle click handlers
-  document.addEventListener('DOMContentLoaded', function() {
-    init();
-    document.querySelectorAll('.lang-btn').forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        setLang(this.getAttribute('data-lang'));
-      });
-    });
-    // URL param support
-    var p = new URLSearchParams(window.location.search);
-    if (p.get('lang') === 'en') setLang('en');
-  });
-})();
 
 </body>
 </html>

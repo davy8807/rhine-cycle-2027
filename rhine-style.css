@@ -784,3 +784,77 @@ td.legal-no {
 .flex { display: flex; align-items: center; gap: 8px; }
 .flex-wrap { flex-wrap: wrap; }
 .gap-1 { gap: 6px; }
+
+/* ===================== LANGUAGE TOGGLE ===================== */
+.lang-toggle {
+  display: flex;
+  gap: 4px;
+  margin-top: 10px;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+}
+.lang-btn {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 8px;
+  padding: 4px 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  line-height: 1.4;
+}
+.lang-btn:hover {
+  background: rgba(255,255,255,0.15);
+}
+.lang-btn.active {
+  background: rgba(255,255,255,0.2);
+  border-color: var(--sage);
+  box-shadow: 0 0 8px rgba(90, 158, 109, 0.3);
+}
+
+/* ===================== i18n HIDE/SHOW ===================== */
+html.lang-en [data-i18n] {
+  display: none;
+}
+html.lang-en [data-i18n-en] {
+  display: inline !important;
+}
+html.lang-zh [data-i18n-en] {
+  display: none !important;
+}
+
+/* ===================== LANGUAGE TOGGLE ===================== */
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-top: 8px;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+}
+.lang-btn {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 6px;
+  padding: 3px 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  line-height: 1.5;
+  color: var(--snow);
+}
+.lang-btn:hover {
+  background: rgba(255,255,255,0.15);
+}
+.lang-btn.active {
+  background: rgba(255,255,255,0.2);
+  border-color: var(--sage);
+  box-shadow: 0 0 8px rgba(90, 158, 109, 0.3);
+}
+.lang-btn-sep {
+  color: rgba(255,255,255,0.2);
+  font-size: 0.8rem;
+  padding: 0 2px;
+}
