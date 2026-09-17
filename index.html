@@ -416,6 +416,18 @@
         <li><strong>建議：</strong>將套件設定在 250W/25km/h 模式以符合四國法例。瑞士的 500W 上限提供緩衝，但建議全程保持 250W 設定以免在歐盟國家有麻煩。</li>
       </ul>
     </div>
+    <!-- CAMPING LAW WARNING (added 2026-09-17) -->
+    <div class="card" style="border-left:5px solid #e0a800; background:#fffdf3;">
+      <div class="card-title" data-i18n="card-camping-law">⚠️ 露營法例：唔可以隨處紮營</div>
+      <p data-i18n="camping-law-p1">「全程露營」＝必須住指定營地（Campingplatz）。德國同荷蘭野外露營都屬違法，會被罰款；瑞士大部分禁止；法國部分容忍。</p>
+      <ul style="padding-left:18px; margin-top:6px;">
+        <li>🇩🇪 德國 — 野外露營違法（Ordnungswidrigkeit）</li>
+        <li>🇳🇱 荷蘭 — 野外露營違法，執法嚴</li>
+        <li>🇨🇭 瑞士 — 大部分地區禁止</li>
+        <li>🇫🇷 法國 — 部分地區容忍，仍建議用營地</li>
+      </ul>
+      <p class="text-small text-muted mt-1">→ 出發前預訂營地；6–7 月旺季要早訂。</p>
+    </div>
   </section>
 
   <!-- ===================== CONVERSION KIT ===================== -->
@@ -473,9 +485,23 @@
         <strong>轉換性：</strong>可快拆前輪 + 快拆電池座，數分鐘轉換 ebike ↔ 普通單車<br>
         <strong>購買渠道：</strong>在香港透過 Yose Power 官網或 AliExpress 購買，出發前安裝好
       </p>
-      <p class="text-small text-muted mt-1">
-        💡 建議攜帶備用內胎、扭矩臂和基本工具。電池需隨身攜帶上機（鋰電池航空託運限制）。
+      <p class="text-small text-muted mt-1" data-i18n="kit-recommend-tip">
+        💡 建議攜帶備用內胎、扭矩臂和基本工具。
       </p>
+    </div>
+    <!-- BATTERY TRANSPORT WARNING (added 2026-09-17) -->
+    <div class="card" style="border-left:5px solid #d9534f; background:#fff6f6;">
+      <div class="card-title" data-i18n="card-battery-warning">🚨 重要：鋰電池飛唔到（計劃需修正）</div>
+      <p data-i18n="battery-warning-p1">18Ah × 36V = 648 Wh。國際航空規則（IATA）規定超過 160 Wh 嘅鋰電池一律禁止上機——手提同行李艙都唔得。648 Wh 係上限嘅 4 倍。</p>
+      <p data-i18n="battery-warning-p2">即係話：任何有實用續航嘅電動單車電池都飛唔到。「喺香港裝好套件、連車連電飛過去」呢個做法唔可行。</p>
+      <p><strong>出路（要揀一條）：</strong></p>
+      <ul style="padding-left:18px; margin-top:6px;">
+        <li><strong>歐洲買／租電池</strong> — 最實際，但要夾電壓同接口</li>
+        <li><strong>海運電池</strong> — 技術上得，但危險品報關、貴、慢（6–8 週）</li>
+        <li><strong>歐洲租電動單車</strong> — 得但貴，跨國單程還車附加費極高</li>
+        <li><strong>唔用電</strong> — 帶自己架普通單車，最簡單</li>
+      </ul>
+      <p class="text-small text-muted mt-1">2026-09-17 修正：原本寫「電池需隨身攜帶上機」，該做法不可行。</p>
     </div>
   </section>
 
@@ -543,7 +569,15 @@
       <div class="card-title" data-i18n="card-timeline">🗓️ 準備時間線</div>
       <div class="timeline" id="timeline-container"></div>
     </div>
+    <!-- MAY TIMING ADVISORY (added 2026-09-17) -->
+    <div class="card" style="border-left:5px solid #e0a800; background:#fffdf3;">
+      <div class="card-title" data-i18n="card-may-timing">⚠️ 時機提醒：5 月可能太早</div>
+      <p data-i18n="may-timing-p1">萊茵河源頭 Oberalp Pass 約 2,044m，5 月可能仍有積雪；阿爾卑斯段營地多數 6 月才開放。</p>
+      <p data-i18n="may-timing-p2">建議考慮 6 月中至 7 月：營地開齊、天氣穩定、日照長。代價是旺季，營地同旅舍要更早預訂。</p>
+      <p class="text-small text-muted mt-1">→ 此為建議，日期未改。改期會影響倒數同機票，由你決定。</p>
+    </div>
   </section>
+
 
   <!-- ===================== SUPPLIES ===================== -->
   <section class="section" id="supplies">
@@ -806,7 +840,7 @@
 })();
 
 // ---- CHECKLIST ----
-(function()  const CHECKLIST_GROUPS = {
+(function() { const CHECKLIST_GROUPS = {
     'bike': [
       '單車（已安裝 ebike 套件）',
       'ebike 電池（18Ah）',
@@ -1165,6 +1199,7 @@ console.log('🚲 Rhine Travel Prep loaded. Safe travels! 🦞');
 </script>
 
 
+<script>
 // ---- I18N Bilingual Support ----
 (function() {
   var data = {
@@ -1837,8 +1872,40 @@ console.log('🚲 Rhine Travel Prep loaded. Safe travels! 🦞');
 "Buy from Yose Power website or AliExpress, delivered to Hong Kong, install before departure"
 ],
 "kit-recommend-tip": [
-"💡 建議攜帶備用內胎、扭矩臂和基本工具。電池需隨身攜帶上機（鋰電池航空託運限制）。",
-"💡 Pack spare inner tubes, torque arms, and basic tools. Carry battery in hand luggage (lithium flight restrictions)."
+"💡 建議攜帶備用內胎、扭矩臂和基本工具。",
+"💡 Pack spare inner tubes, torque arms, and basic tools."
+],
+"card-battery-warning": [
+"🚨 重要：鋰電池飛唔到（計劃需修正）",
+"🚨 Important: lithium batteries cannot fly (plan needs revision)"
+],
+"battery-warning-p1": [
+"18Ah × 36V = 648 Wh。國際航空規則（IATA）規定超過 160 Wh 嘅鋰電池一律禁止上機——手提同行李艙都唔得。648 Wh 係上限嘅 4 倍。",
+"18Ah x 36V = 648 Wh. IATA rules forbid lithium batteries over 160 Wh outright - both carry-on and checked. 648 Wh is 4x the limit."
+],
+"battery-warning-p2": [
+"即係話：任何有實用續航嘅電動單車電池都飛唔到。「喺香港裝好套件、連車連電飛過去」呢個做法唔可行。",
+"In short: no e-bike battery with useful range can fly. Fitting the kit in Hong Kong and flying the bike over with its battery is not possible."
+],
+"card-camping-law": [
+"⚠️ 露營法例：唔可以隨處紮營",
+"⚠️ Camping law: wild camping is not allowed"
+],
+"camping-law-p1": [
+"「全程露營」＝必須住指定營地（Campingplatz）。德國同荷蘭野外露營都屬違法，會被罰款；瑞士大部分禁止；法國部分容忍。",
+"Camping throughout means campsites only (Campingplatz). Wild camping is illegal and fined in Germany and the Netherlands; mostly banned in Switzerland; partly tolerated in France."
+],
+"card-may-timing": [
+"⚠️ 時機提醒：5 月可能太早",
+"⚠️ Timing: May may be too early"
+],
+"may-timing-p1": [
+"萊茵河源頭 Oberalp Pass 約 2,044m，5 月可能仍有積雪；阿爾卑斯段營地多數 6 月才開放。",
+"The Rhine source at Oberalp Pass is about 2,044 m and may still hold snow in May; most Alpine campsites only open in June."
+],
+"may-timing-p2": [
+"建議考慮 6 月中至 7 月：營地開齊、天氣穩定、日照長。代價是旺季，營地同旅舍要更早預訂。",
+"Consider mid-June to July instead: campsites open, stable weather, long daylight. The cost is peak season - book campsites and hostels earlier."
 ],
 "card-bike-gear": [
 "📦 單車裝備",
@@ -2009,6 +2076,7 @@ console.log('🚲 Rhine Travel Prep loaded. Safe travels! 🦞');
     if (p.get('lang') === 'en') setLang('en');
   });
 })();
+</script>
 
 </body>
 </html>
